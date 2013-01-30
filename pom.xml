@@ -18,11 +18,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>eu.clarin.weblicht</groupId>
-    <artifactId>oai-bindings</artifactId>
+    <artifactId>bindings</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>oai-bindings</name>
+    <name>bindings</name>
     <url>http://www.clarin.eu/</url>
 
     <properties>
