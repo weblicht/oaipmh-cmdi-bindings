@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name = "simpletype-MemberOfNationalFederation-8-clarin.eu.cr1.c_1320657629669")
 @XmlEnum
-public enum SimpletypeMemberOfNationalFederation {
+public enum SimpleMemberOfNationalFederation {
 
     NL,
     DE,
@@ -15,7 +15,7 @@ public enum SimpletypeMemberOfNationalFederation {
         return name();
     }
 
-    public static SimpletypeMemberOfNationalFederation fromValue(String v) {
+    public static SimpleMemberOfNationalFederation fromValue(String v) {
         return valueOf(v);
     }
 }

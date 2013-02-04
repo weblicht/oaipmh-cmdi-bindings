@@ -19,7 +19,7 @@ public class CenterBasicInformation extends AbstractComponent {
     @XmlElement(name = "Name", required = true)
     private List<CMDString> name;
     @XmlElement(name = "Type", required = true)
-    private ComplextypeType type;
+    private Type type;
     @XmlElement(name = "Status")
     private String status;
     @XmlElement(name = "Description", required = true)
@@ -31,7 +31,7 @@ public class CenterBasicInformation extends AbstractComponent {
         return name;
     }
 
-    public ComplextypeType getType() {
+    public Type getType() {
         return type;
     }
 

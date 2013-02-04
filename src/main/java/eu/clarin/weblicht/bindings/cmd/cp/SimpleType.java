@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name = "simpletype-Type-clarin.eu.cr1.c_1320657629668")
 @XmlEnum
-public enum SimpletypeType {
+public enum SimpleType {
 
     A,
     B,
@@ -16,7 +16,7 @@ public enum SimpletypeType {
         return name();
     }
 
-    public static SimpletypeType fromValue(String v) {
+    public static SimpleType fromValue(String v) {
         return valueOf(v);
     }
 

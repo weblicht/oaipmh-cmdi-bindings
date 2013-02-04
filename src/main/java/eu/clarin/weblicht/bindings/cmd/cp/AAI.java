@@ -18,7 +18,7 @@ public class AAI extends AbstractRefBinding {
     @XmlElement(name = "AaiStatus", required = true)
     private String aaiStatus;
     @XmlElement(name = "MemberOfNationalFederation")
-    private List<ComplextypeMemberOfNationalFederation> memberOfNationalFederation;
+    private List<MemberOfNationalFederation> memberOfNationalFederation;
     @XmlElement(name = "MemberOfSpf")
     private boolean memberOfSpf;
 
@@ -26,7 +26,7 @@ public class AAI extends AbstractRefBinding {
         return aaiStatus;
     }
 
-    public List<ComplextypeMemberOfNationalFederation> getMemberOfNationalFederation() {
+    public List<MemberOfNationalFederation> getMemberOfNationalFederation() {
         return this.memberOfNationalFederation;
     }
 

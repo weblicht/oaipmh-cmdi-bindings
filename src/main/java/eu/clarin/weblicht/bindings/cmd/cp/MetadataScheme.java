@@ -9,12 +9,12 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlType(name = "complextype-MetadataScheme-9-clarin.eu.cr1.c_1320657629669", propOrder = {
     "value"
 })
-public class ComplextypeMetadataScheme {
+public class MetadataScheme {
 
     @XmlValue
-    private SimpletypeMetadataScheme value;
+    private SimpleMetadataScheme value;
 
-    public SimpletypeMetadataScheme getValue() {
+    public SimpleMetadataScheme getValue() {
         return value;
     }
 }

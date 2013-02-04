@@ -5,16 +5,18 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
+
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "complextype-WebServiceType-9-clarin.eu.cr1.c_1320657629669", propOrder = {
+@XmlType(name = "complextype-Type-clarin.eu.cr1.c_1320657629668", propOrder = {
     "value"
 })
-public class ComplextypeWebServiceType {
+public class Type {
 
     @XmlValue
-    private SimpletypeWebServiceType value;
+    private SimpleType value;
 
-    public SimpletypeWebServiceType getValue() {
+    public SimpleType getValue() {
         return value;
     }
+
 }

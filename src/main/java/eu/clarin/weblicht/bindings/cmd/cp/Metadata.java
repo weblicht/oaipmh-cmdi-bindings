@@ -1,6 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.cp;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractRefBinding;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.*;
@@ -14,18 +15,18 @@ import javax.xml.bind.annotation.*;
 public class Metadata extends AbstractRefBinding {
 
     @XmlElement(name = "MetadataScheme", required = true)
-    private List<ComplextypeMetadataScheme> metadataScheme;
+    private List<MetadataScheme> metadataScheme;
     @XmlElement(name = "WebServicesSet")
     private String webServicesSet;
     @XmlElement(name = "WebServiceType")
-    private List<ComplextypeWebServiceType> webServiceType;
+    private List<WebServiceType> webServiceType;
     @XmlElement(name = "OaiAccessPoint", required = true)
     @XmlSchemaType(name = "anyURI")
-    private String oaiAccessPoint;
+    private URI oaiAccessPoint;
 
-    public List<ComplextypeMetadataScheme> getMetadataScheme() {
+    public List<MetadataScheme> getMetadataScheme() {
         if (metadataScheme == null) {
-            metadataScheme = new ArrayList<ComplextypeMetadataScheme>();
+            metadataScheme = new ArrayList<MetadataScheme>();
         }
         return this.metadataScheme;
     }
@@ -34,14 +35,14 @@ public class Metadata extends AbstractRefBinding {
         return webServicesSet;
     }
 
-    public List<ComplextypeWebServiceType> getWebServiceType() {
+    public List<WebServiceType> getWebServiceType() {
         if (webServiceType == null) {
-            webServiceType = new ArrayList<ComplextypeWebServiceType>();
+            webServiceType = new ArrayList<WebServiceType>();
         }
         return this.webServiceType;
     }
 
-    public String getOaiAccessPoint() {
+    public URI getOaiAccessPoint() {
         return oaiAccessPoint;
     }
 }

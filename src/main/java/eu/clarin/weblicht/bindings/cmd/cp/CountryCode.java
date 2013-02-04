@@ -5,18 +5,16 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
-
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "complextype-Type-clarin.eu.cr1.c_1320657629668", propOrder = {
+@XmlType(name = "complextype-Code-clarin.eu.cr1.c_1271859438104", propOrder = {
     "value"
 })
-public class ComplextypeType {
+public class CountryCode {
 
     @XmlValue
-    private SimpletypeType value;
+    protected SimpleCountryCode value;
 
-    public SimpletypeType getValue() {
+    public SimpleCountryCode getValue() {
         return value;
     }
-
 }

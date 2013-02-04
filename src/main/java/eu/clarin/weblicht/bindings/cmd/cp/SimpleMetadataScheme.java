@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name = "simpletype-MetadataScheme-9-clarin.eu.cr1.c_1320657629669")
 @XmlEnum
-public enum SimpletypeMetadataScheme {
+public enum SimpleMetadataScheme {
 
     OLAC,
     CMDI;
@@ -14,7 +14,7 @@ public enum SimpletypeMetadataScheme {
         return name();
     }
 
-    public static SimpletypeMetadataScheme fromValue(String v) {
+    public static SimpleMetadataScheme fromValue(String v) {
         return valueOf(v);
     }
 }

@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name = "simpletype-Code-clarin.eu.cr1.c_1271859438104")
 @XmlEnum
-public enum SimpletypeCountryCode {
+public enum SimpleCountryCode {
 
     AD,
     AE,
@@ -259,7 +259,7 @@ public enum SimpletypeCountryCode {
         return name();
     }
 
-    public static SimpletypeCountryCode fromValue(String v) {
+    public static SimpleCountryCode fromValue(String v) {
         return valueOf(v);
     }
 

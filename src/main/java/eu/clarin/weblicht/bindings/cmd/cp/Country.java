@@ -15,9 +15,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {"code"})
 public class Country extends AbstractComponent {
     @XmlElement(name = "Code", required = true)
-    private List<ComplextypeCountryCode> code;
+    private List<CountryCode> code;
 
-    public List<ComplextypeCountryCode> getCode() {
+    public List<CountryCode> getCode() {
         return code;
     }    
 }

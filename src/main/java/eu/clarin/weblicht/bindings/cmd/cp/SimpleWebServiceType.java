@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name = "simpletype-WebServiceType-9-clarin.eu.cr1.c_1320657629669")
 @XmlEnum
-public enum SimpletypeWebServiceType {
+public enum SimpleWebServiceType {
 
     SOAP("SOAP"),
     REST("REST"),
@@ -14,7 +14,7 @@ public enum SimpletypeWebServiceType {
     WEB_LICHT("WebLicht");
     private final String value;
 
-    SimpletypeWebServiceType(String v) {
+    SimpleWebServiceType(String v) {
         value = v;
     }
 
@@ -22,8 +22,8 @@ public enum SimpletypeWebServiceType {
         return value;
     }
 
-    public static SimpletypeWebServiceType fromValue(String v) {
-        for (SimpletypeWebServiceType c : SimpletypeWebServiceType.values()) {
+    public static SimpleWebServiceType fromValue(String v) {
+        for (SimpleWebServiceType c : SimpleWebServiceType.values()) {
             if (c.value.equals(v)) {
                 return c;
             }
