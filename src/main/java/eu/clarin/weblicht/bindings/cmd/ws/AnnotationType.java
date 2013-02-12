@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractDescribedComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,20 +15,20 @@ import javax.xml.bind.annotation.XmlElement;
 public class AnnotationType extends AbstractDescribedComponent {
 
     @XmlElement(name = "AnnotationLevelType", required = true)
-    private List<CMDString> annotationLevelTypes;
+    private List<StringBinding> annotationLevelTypes;
     @XmlElement(name = "AnnotationMode")
-    private List<CMDString> annotationModes;
+    private List<StringBinding> annotationModes;
     @XmlElement(name = "TagsetInfo")
     private TagsetInfo tagsetInfo;
 
     private AnnotationType() {
     }
 
-    public List<CMDString> getAnnotationLevelTypes() {
+    public List<StringBinding> getAnnotationLevelTypes() {
         return annotationLevelTypes;
     }
 
-    public List<CMDString> getAnnotationModes() {
+    public List<StringBinding> getAnnotationModes() {
         return annotationModes;
     }
 

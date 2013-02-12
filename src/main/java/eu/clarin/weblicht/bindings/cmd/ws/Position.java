@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,21 +15,21 @@ import javax.xml.bind.annotation.XmlElement;
 public class Position extends AbstractComponent {
 
     @XmlElement(name = "PositionType", required = true)
-    private List<CMDString> positionTypes;
+    private List<StringBinding> positionTypes;
     @XmlElement(name = "StartPosition", required = true)
-    private CMDString startPosition;
+    private StringBinding startPosition;
     @XmlElement(name = "EndPosition", required = true)
-    private CMDString endPosition;
+    private StringBinding endPosition;
 
-    public List<CMDString> getPositionTypes() {
+    public List<StringBinding> getPositionTypes() {
         return positionTypes;
     }
 
-    public CMDString getStartPosition() {
+    public StringBinding getStartPosition() {
         return startPosition;
     }
 
-    public CMDString getEndPosition() {
+    public StringBinding getEndPosition() {
         return endPosition;
     }
 

@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractDescribedComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,12 +15,12 @@ import javax.xml.bind.annotation.XmlElement;
 public class TagsetInfo extends AbstractDescribedComponent {
 
     @XmlElement(name = "Tagset")
-    private List<CMDString> tagsets;
+    private List<StringBinding> tagsets;
 
     private TagsetInfo() {
     }
 
-    public List<CMDString> getTagset() {
+    public List<StringBinding> getTagset() {
         return tagsets;
     }
 

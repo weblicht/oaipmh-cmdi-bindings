@@ -1,6 +1,6 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.*;
 
@@ -12,12 +12,12 @@ import javax.xml.bind.annotation.*;
 public class DeploymentToolInfo extends AbstractToolInfo {
 
     @XmlElement(name = "DeploymentTool")
-    private List<CMDString> deploymentTools;
+    private List<StringBinding> deploymentTools;
 
     private DeploymentToolInfo() {
     }
 
-    public List<CMDString> getDeploymentTools() {
+    public List<StringBinding> getDeploymentTools() {
         return this.deploymentTools;
     }
 

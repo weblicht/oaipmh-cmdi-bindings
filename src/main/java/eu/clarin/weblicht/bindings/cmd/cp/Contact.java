@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.cp;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.*;
 
@@ -20,7 +20,7 @@ public class Contact extends AbstractComponent {
     @XmlElement(name = "Email")
     private List<String> email;
     @XmlElement(name = "Organisation")
-    private List<CMDString> organisation;
+    private List<StringBinding> organisation;
     @XmlElement(name = "Telephone")
     private List<String> telephone;
     @XmlElement(name = "Website")
@@ -39,7 +39,7 @@ public class Contact extends AbstractComponent {
         return this.email;
     }
 
-    public List<CMDString> getOrganisation() {
+    public List<StringBinding> getOrganisation() {
         return this.organisation;
     }
 

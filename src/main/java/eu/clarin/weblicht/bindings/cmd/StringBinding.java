@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  */
 @XmlAccessorType(value = XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {"value"})
-public class CMDString {
+public class StringBinding {
 
     @XmlValue
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -18,10 +18,10 @@ public class CMDString {
     @XmlAttribute(name = "lang", namespace = "http://www.w3.org/XML/1998/namespace")
     private String lang;
 
-    public CMDString() {
+    public StringBinding() {
     }
 
-    public CMDString(String value) {
+    public StringBinding(String value) {
         this.value = value;
     }
 

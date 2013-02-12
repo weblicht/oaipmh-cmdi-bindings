@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.cp;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
 public class CenterBasicInformation extends AbstractComponent {
 
     @XmlElement(name = "Name", required = true)
-    private List<CMDString> name;
+    private List<StringBinding> name;
     @XmlElement(name = "Type", required = true)
     private Type type;
     @XmlElement(name = "Status")
@@ -27,7 +27,7 @@ public class CenterBasicInformation extends AbstractComponent {
     @XmlElement(name = "Country", required = true)
     private Country country;
 
-    public List<CMDString> getName() {
+    public List<StringBinding> getName() {
         return name;
     }
 

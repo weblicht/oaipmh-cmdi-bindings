@@ -1,6 +1,6 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlElement;
 public class InputParameter extends AbstractParameter<InputValue> {
 
     @XmlElement(name = "WebServiceArgValue")
-    private CMDString webServiceArgValue;
+    private StringBinding webServiceArgValue;
     @XmlElement(name = "AllowManualSelectionFallback")
     private Boolean allowManualSelectionFallback;
     @XmlElement(name = "Values")
@@ -22,13 +22,13 @@ public class InputParameter extends AbstractParameter<InputValue> {
     private InputParameter() {
     }
 
-    InputParameter(CMDString name, CMDString webServiceArgValue, boolean allowManualSelectionFallback) {
+    InputParameter(StringBinding name, StringBinding webServiceArgValue, boolean allowManualSelectionFallback) {
         super(name);
         this.webServiceArgValue = webServiceArgValue;
         this.allowManualSelectionFallback = allowManualSelectionFallback;
     }
 
-    public CMDString getWebServiceArgValue() {
+    public StringBinding getWebServiceArgValue() {
         return webServiceArgValue;
     }
 

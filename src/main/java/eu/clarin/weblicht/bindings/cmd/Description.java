@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlAttribute;
  * @author akislev
  */
 @XmlAccessorType(value = XmlAccessType.FIELD)
-public class Description extends CMDString {
+public class Description extends StringBinding {
 
     @XmlAttribute(name = "type")
     private String type;

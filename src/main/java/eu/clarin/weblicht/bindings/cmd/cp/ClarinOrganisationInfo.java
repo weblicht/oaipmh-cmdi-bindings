@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.cp;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,11 +17,11 @@ import javax.xml.bind.annotation.XmlType;
 public class ClarinOrganisationInfo extends AbstractComponent {
 
     @XmlElement(name = "OrganisationName", required = true)
-    private List<CMDString> organisationName;
+    private List<StringBinding> organisationName;
     @XmlElement(name = "Institution", required = true)
-    private List<CMDString> institution;
+    private List<StringBinding> institution;
     @XmlElement(name = "WorkingUnit", required = true)
-    private List<CMDString> workingUnit;
+    private List<StringBinding> workingUnit;
     @XmlElement(name = "Code", required = true)
     private String code;
     @XmlElement(name = "PostAddress", required = true)
@@ -29,15 +29,15 @@ public class ClarinOrganisationInfo extends AbstractComponent {
     @XmlElement(name = "Expertise", required = true)
     private String expertise;
 
-    public List<CMDString> getOrganisationName() {
+    public List<StringBinding> getOrganisationName() {
         return this.organisationName;
     }
 
-    public List<CMDString> getInstitution() {
+    public List<StringBinding> getInstitution() {
         return this.institution;
     }
 
-    public List<CMDString> getWorkingUnit() {
+    public List<StringBinding> getWorkingUnit() {
         return this.workingUnit;
     }
 

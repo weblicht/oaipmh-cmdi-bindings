@@ -2,7 +2,7 @@ package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractComponent;
 import eu.clarin.weblicht.bindings.cmd.Descriptions;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.net.URI;
 import java.util.Collections;
 import java.util.List;
@@ -28,21 +28,21 @@ import javax.xml.bind.annotation.*;
 public class Contact extends AbstractComponent {
 
     @XmlElement(name = "Person")
-    private List<CMDString> persons;
+    private List<StringBinding> persons;
     @XmlElement(name = "Role")
-    private List<CMDString> roles;
+    private List<StringBinding> roles;
     @XmlElement(name = "Address")
-    private List<CMDString> addresses;
+    private List<StringBinding> addresses;
     @XmlElement(name = "Email")
-    private List<CMDString> emails;
+    private List<StringBinding> emails;
     @XmlElement(name = "Department")
-    private List<CMDString> departments;
+    private List<StringBinding> departments;
     @XmlElement(name = "Organisation")
-    private List<CMDString> organisations;
+    private List<StringBinding> organisations;
     @XmlElement(name = "TelephoneNumber")
-    private List<CMDString> telephoneNumbers;
+    private List<StringBinding> telephoneNumbers;
     @XmlElement(name = "FaxNumber")
-    private List<CMDString> faxNumbers;
+    private List<StringBinding> faxNumbers;
     @XmlElement(name = "Url")
     @XmlSchemaType(name = "anyURI")
     private List<URI> urls;
@@ -52,59 +52,59 @@ public class Contact extends AbstractComponent {
     Contact() {
     }
 
-    public List<CMDString> getPersons() {
+    public List<StringBinding> getPersons() {
         return persons;
     }
 
-    public List<CMDString> getRoles() {
+    public List<StringBinding> getRoles() {
         return roles;
     }
 
-    public List<CMDString> getAddresses() {
+    public List<StringBinding> getAddresses() {
         return addresses;
     }
 
-    public List<CMDString> getEmails() {
+    public List<StringBinding> getEmails() {
         return emails;
     }
 
-    public CMDString getEmail() {
-        if (emails != null && emails.size() > 0) {
+    public StringBinding getEmail() {
+        if (emails != null && !emails.isEmpty()) {
             return emails.get(0);
         } else {
-            return new CMDString();
+            return null;
         }
     }
 
-    public void setEmail(CMDString email) {
+    public void setEmail(StringBinding email) {
         emails = Collections.singletonList(email);
     }
 
-    public List<CMDString> getDepartments() {
+    public List<StringBinding> getDepartments() {
         return departments;
     }
 
-    public List<CMDString> getOrganisations() {
+    public List<StringBinding> getOrganisations() {
         return organisations;
     }
 
-    public CMDString getOrganisation() {
-        if (organisations != null && organisations.size() > 0) {
+    public StringBinding getOrganisation() {
+        if (organisations != null && !organisations.isEmpty()) {
             return organisations.get(0);
         } else {
-            return new CMDString();
+            return null;
         }
     }
 
-    public void setOrganisation(CMDString organisation) {
+    public void setOrganisation(StringBinding organisation) {
         organisations = Collections.singletonList(organisation);
     }
 
-    public List<CMDString> getTelephoneNumbers() {
+    public List<StringBinding> getTelephoneNumbers() {
         return telephoneNumbers;
     }
 
-    public List<CMDString> getFaxNumbers() {
+    public List<StringBinding> getFaxNumbers() {
         return faxNumbers;
     }
 

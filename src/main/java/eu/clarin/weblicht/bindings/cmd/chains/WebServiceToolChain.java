@@ -3,7 +3,7 @@ package eu.clarin.weblicht.bindings.cmd.chains;
 import eu.clarin.weblicht.bindings.cmd.AbstractRefBinding;
 import eu.clarin.weblicht.bindings.cmd.Description;
 import eu.clarin.weblicht.bindings.cmd.Descriptions;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -25,7 +25,7 @@ public class WebServiceToolChain extends AbstractRefBinding {
     private WebServiceToolChain() {
     }
 
-    public WebServiceToolChain(CMDString name, Description description, Toolchain toolchain) {
+    public WebServiceToolChain(StringBinding name, Description description, Toolchain toolchain) {
         this.generalInfo = new GeneralInfo(SimpleResourceClass.TOOLCHAIN, name, new Descriptions(description));
         this.toolchain = toolchain;
     }

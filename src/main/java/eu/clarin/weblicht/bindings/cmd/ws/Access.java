@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractDescribedComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.net.URI;
 import java.util.List;
 import javax.xml.bind.annotation.*;
@@ -14,14 +14,14 @@ import javax.xml.bind.annotation.*;
 public class Access extends AbstractDescribedComponent {
 
     @XmlElement(name = "Availability")
-    private List<CMDString> availabilities;
+    private List<StringBinding> availabilities;
     @XmlElement(name = "DistributionMedium")
-    private List<CMDString> distributionMedia;
+    private List<StringBinding> distributionMedia;
     @XmlElement(name = "CatalogueLink")
     @XmlSchemaType(name = "anyURI")
     private List<URI> catalogueLinks;
     @XmlElement(name = "Price")
-    private List<CMDString> prices;
+    private List<StringBinding> prices;
     @XmlElement(name = "DeploymentToolInfo")
     private List<DeploymentToolInfo> deploymentToolInfos;
     @XmlElement(name = "Contact", required = true)
@@ -30,11 +30,11 @@ public class Access extends AbstractDescribedComponent {
     private Access() {
     }
 
-    public List<CMDString> getAvailabilities() {
+    public List<StringBinding> getAvailabilities() {
         return availabilities;
     }
 
-    public List<CMDString> getDistributionMedia() {
+    public List<StringBinding> getDistributionMedia() {
         return distributionMedia;
     }
 
@@ -42,7 +42,7 @@ public class Access extends AbstractDescribedComponent {
         return catalogueLinks;
     }
 
-    public List<CMDString> getPrices() {
+    public List<StringBinding> getPrices() {
         return prices;
     }
 

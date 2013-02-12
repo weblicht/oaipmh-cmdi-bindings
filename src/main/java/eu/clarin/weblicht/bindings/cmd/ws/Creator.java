@@ -22,7 +22,7 @@ public class Creator extends AbstractComponent {
 
     public Contact getContact() {
         if (contact == null) {
-            return new Contact();
+            contact = new Contact();
         }
         return contact;
     }

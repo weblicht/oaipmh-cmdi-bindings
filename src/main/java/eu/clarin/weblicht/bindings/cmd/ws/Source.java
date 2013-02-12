@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractDescribedComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,9 +15,9 @@ import javax.xml.bind.annotation.XmlElement;
 public class Source extends AbstractDescribedComponent {
 
     @XmlElement(name = "OriginalSource")
-    private List<CMDString> originalSources;
+    private List<StringBinding> originalSources;
     @XmlElement(name = "SourceType")
-    private List<CMDString> sourceTypes;
+    private List<StringBinding> sourceTypes;
     @XmlElement(name = "MediaFiles")
     private MediaFiles mediaFiles;
     @XmlElement(name = "Derivation")
@@ -26,11 +26,11 @@ public class Source extends AbstractDescribedComponent {
     private Source() {
     }
 
-    public List<CMDString> getOriginalSources() {
+    public List<StringBinding> getOriginalSources() {
         return this.originalSources;
     }
 
-    public List<CMDString> getSourceTypes() {
+    public List<StringBinding> getSourceTypes() {
         return this.sourceTypes;
     }
 

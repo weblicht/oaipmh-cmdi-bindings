@@ -2,7 +2,7 @@ package eu.clarin.weblicht.bindings.cmd.chains;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractDescribedComponent;
 import eu.clarin.weblicht.bindings.cmd.Descriptions;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.Collections;
 import java.util.List;
 import javax.xml.bind.annotation.*;
@@ -17,15 +17,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class GeneralInfo extends AbstractDescribedComponent {
 
     @XmlElement(name = "ResourceName")
-    private List<CMDString> resourceName;
+    private List<StringBinding> resourceName;
     @XmlElement(name = "ResourceTitle")
-    private List<CMDString> resourceTitle;
+    private List<StringBinding> resourceTitle;
     @XmlElement(name = "ResourceClass", required = true)
     private List<ResourceClass> resourceClass;
     @XmlElement(name = "PID")
-    private CMDString pid;
+    private StringBinding pid;
     @XmlElement(name = "Version")
-    private List<CMDString> version;
+    private List<StringBinding> version;
     @XmlElement(name = "LifeCycleStatus")
     private LifeCycleStatus lifeCycleStatus;
     @XmlElement(name = "StartYear")
@@ -35,30 +35,30 @@ public class GeneralInfo extends AbstractDescribedComponent {
     @XmlSchemaType(name = "gYear")
     private XMLGregorianCalendar completionYear;
     @XmlElement(name = "PublicationDate")
-    private CMDString publicationDate;
+    private StringBinding publicationDate;
     @XmlElement(name = "LastUpdate")
-    private CMDString lastUpdate;
+    private StringBinding lastUpdate;
     @XmlElement(name = "TimeCoverage")
-    private List<CMDString> timeCoverage;
+    private List<StringBinding> timeCoverage;
     @XmlElement(name = "LegalOwner")
-    private List<CMDString> legalOwner;
+    private List<StringBinding> legalOwner;
     @XmlElement(name = "Location")
     private Location location;
 
     private GeneralInfo() {
     }
 
-    public GeneralInfo(SimpleResourceClass resourceClass, CMDString resourceName, Descriptions descriptions) {
+    public GeneralInfo(SimpleResourceClass resourceClass, StringBinding resourceName, Descriptions descriptions) {
         super(descriptions);
         this.resourceClass = Collections.singletonList(new ResourceClass(resourceClass));
         this.resourceName = Collections.singletonList(resourceName);
     }
 
-    public List<CMDString> getResourceName() {
+    public List<StringBinding> getResourceName() {
         return this.resourceName;
     }
 
-    public List<CMDString> getResourceTitle() {
+    public List<StringBinding> getResourceTitle() {
         return this.resourceTitle;
     }
 
@@ -66,11 +66,11 @@ public class GeneralInfo extends AbstractDescribedComponent {
         return this.resourceClass;
     }
 
-    public CMDString getPID() {
+    public StringBinding getPID() {
         return pid;
     }
 
-    public List<CMDString> getVersion() {
+    public List<StringBinding> getVersion() {
         return this.version;
     }
 
@@ -86,19 +86,19 @@ public class GeneralInfo extends AbstractDescribedComponent {
         return completionYear;
     }
 
-    public CMDString getPublicationDate() {
+    public StringBinding getPublicationDate() {
         return publicationDate;
     }
 
-    public CMDString getLastUpdate() {
+    public StringBinding getLastUpdate() {
         return lastUpdate;
     }
 
-    public List<CMDString> getTimeCoverage() {
+    public List<StringBinding> getTimeCoverage() {
         return this.timeCoverage;
     }
 
-    public List<CMDString> getLegalOwner() {
+    public List<StringBinding> getLegalOwner() {
         return this.legalOwner;
     }
 

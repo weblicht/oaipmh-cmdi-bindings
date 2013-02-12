@@ -33,12 +33,9 @@ public class Creators extends AbstractComponent {
 
     public Creator getFirstCreator() {
         Creator creator;
-        if (creators == null) {
+        if (creators == null || creators.isEmpty()) {
             creator = new Creator();
             creators = Collections.singletonList(creator);
-        } else if (creators.isEmpty()) {
-            creator = new Creator();
-            creators.add(creator);
         } else {
             creator = creators.get(0);
         }

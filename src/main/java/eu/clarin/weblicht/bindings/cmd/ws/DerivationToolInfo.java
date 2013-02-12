@@ -1,6 +1,6 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -14,9 +14,9 @@ import javax.xml.bind.annotation.XmlElement;
 public class DerivationToolInfo extends AbstractToolInfo {
 
     @XmlElement(name = "DerivationTool")
-    protected List<CMDString> derivationTools;
+    protected List<StringBinding> derivationTools;
 
-    public List<CMDString> getDerivationTools() {
+    public List<StringBinding> getDerivationTools() {
         return derivationTools;
     }
 

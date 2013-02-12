@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.chains;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,14 +17,14 @@ import javax.xml.bind.annotation.XmlType;
 public class Country extends AbstractComponent {
 
     @XmlElement(name = "CountryName", required = true)
-    private List<CMDString> countryName;
+    private List<StringBinding> countryName;
     @XmlElement(name = "CountryCoding", required = true)
     private CountryCoding countryCoding;
 
     private Country() {
     }
 
-    public List<CMDString> getCountryName() {
+    public List<StringBinding> getCountryName() {
         return this.countryName;
     }
 

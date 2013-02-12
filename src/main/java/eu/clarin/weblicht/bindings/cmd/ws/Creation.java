@@ -2,7 +2,7 @@ package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractComponent;
 import eu.clarin.weblicht.bindings.cmd.Descriptions;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Creation extends AbstractComponent {
 
     @XmlElement(name = "Topic")
-    private List<CMDString> topics;
+    private List<StringBinding> topics;
     @XmlElement(name = "Creators")
     private Creators creators;
     @XmlElement(name = "CreationToolInfo")
@@ -40,7 +40,7 @@ public class Creation extends AbstractComponent {
     Creation() {
     }
 
-    public List<CMDString> getTopic() {
+    public List<StringBinding> getTopic() {
         return topics;
     }
 

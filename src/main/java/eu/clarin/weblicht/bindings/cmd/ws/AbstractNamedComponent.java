@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -14,22 +14,22 @@ import javax.xml.bind.annotation.XmlElement;
 public abstract class AbstractNamedComponent extends AbstractComponent {
 
     @XmlElement(name = "Name", required = true)
-    private CMDString name;
+    private StringBinding name;
     @XmlElement(name = "Description")
-    private CMDString description;
+    private StringBinding description;
 
     protected AbstractNamedComponent() {
     }
 
-    protected AbstractNamedComponent(CMDString name) {
+    protected AbstractNamedComponent(StringBinding name) {
         this.name = name;
     }
 
-    public CMDString getName() {
+    public StringBinding getName() {
         return name;
     }
 
-    public CMDString getDescription() {
+    public StringBinding getDescription() {
         return description;
     }
 }

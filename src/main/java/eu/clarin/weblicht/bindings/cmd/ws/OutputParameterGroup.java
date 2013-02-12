@@ -1,6 +1,6 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -20,7 +20,7 @@ public class OutputParameterGroup extends AbstractParameterGroup {
     private OutputParameterGroup() {
     }
 
-    OutputParameterGroup(CMDString name) {
+    OutputParameterGroup(StringBinding name) {
         super(name);
         this.parameters = new OutputParameters();
     }

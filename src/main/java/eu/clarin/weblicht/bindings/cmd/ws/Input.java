@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractRefBinding;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.Collections;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlAccessorType(value = XmlAccessType.FIELD)
 public class Input extends AbstractRefBinding {
 
-    private static final CMDString GROUP_NAME = new CMDString("Input Parameters");
+    private static final StringBinding GROUP_NAME = new StringBinding("Input Parameters");
     @XmlElement(name = "ParameterGroup")
     private List<InputParameterGroup> parameterGroups;
 

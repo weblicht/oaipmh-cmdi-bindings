@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractDescribedComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -14,20 +14,20 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class Derivation extends AbstractDescribedComponent {
 
     @XmlElement(name = "Organisation")
-    private List<CMDString> organisations;
+    private List<StringBinding> organisations;
     @XmlElement(name = "DerivationDate")
     @XmlSchemaType(name = "date")
     private XMLGregorianCalendar derivationDate;
     @XmlElement(name = "DerivationMode")
-    private List<CMDString> derivationModes;
+    private List<StringBinding> derivationModes;
     @XmlElement(name = "DerivationType")
-    private List<CMDString> derivationTypes;
+    private List<StringBinding> derivationTypes;
     @XmlElement(name = "DerivationWorkflow")
-    private List<CMDString> derivationWorkflows;
+    private List<StringBinding> derivationWorkflows;
     @XmlElement(name = "DerivationToolInfo")
     private List<DerivationToolInfo> derivationToolInfos;
 
-    public List<CMDString> getOrganisations() {
+    public List<StringBinding> getOrganisations() {
         return organisations;
     }
 
@@ -35,15 +35,15 @@ public class Derivation extends AbstractDescribedComponent {
         return derivationDate;
     }
 
-    public List<CMDString> getDerivationModes() {
+    public List<StringBinding> getDerivationModes() {
         return derivationModes;
     }
 
-    public List<CMDString> getDerivationTypes() {
+    public List<StringBinding> getDerivationTypes() {
         return derivationTypes;
     }
 
-    public List<CMDString> getDerivationWorkflows() {
+    public List<StringBinding> getDerivationWorkflows() {
         return derivationWorkflows;
     }
 

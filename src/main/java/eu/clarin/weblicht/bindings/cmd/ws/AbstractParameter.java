@@ -1,6 +1,6 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.Collections;
 import java.util.Iterator;
 import javax.xml.bind.annotation.*;
@@ -18,7 +18,7 @@ public abstract class AbstractParameter<V> extends AbstractParameterGroup implem
     protected AbstractParameter() {
     }
 
-    protected AbstractParameter(CMDString name) {
+    protected AbstractParameter(StringBinding name) {
         super(name);
     }
 

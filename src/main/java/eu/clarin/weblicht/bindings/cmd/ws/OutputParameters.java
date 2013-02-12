@@ -1,6 +1,9 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
+import eu.clarin.weblicht.bindings.cmd.AbstractRefBinding;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -11,7 +14,7 @@ import javax.xml.bind.annotation.XmlElement;
  * @author akislev
  */
 @XmlAccessorType(value = XmlAccessType.FIELD)
-public class OutputParameters extends AbstractParameters<OutputParameter> {
+public class OutputParameters extends AbstractRefBinding implements Iterable<OutputParameter> {
 
     @XmlElement(name = "Parameter", required = true)
     private List<OutputParameter> parameters;
@@ -19,9 +22,15 @@ public class OutputParameters extends AbstractParameters<OutputParameter> {
     OutputParameters() {
     }
 
-    @Override
-    protected List<OutputParameter> getParameters() {
-        return parameters;
+    public Iterator<OutputParameter> iterator() {
+        if (parameters == null) {
+            return Collections.<OutputParameter>emptyList().iterator();
+        }
+        return parameters.iterator();
+    }
+
+    public void clear() {
+        parameters = null;
     }
 
     public boolean add(OutputParameter parameter) {

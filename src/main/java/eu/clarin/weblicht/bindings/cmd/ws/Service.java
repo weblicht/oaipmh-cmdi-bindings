@@ -2,7 +2,7 @@ package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractComponent;
 import eu.clarin.weblicht.bindings.cmd.Description;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -21,10 +21,10 @@ public class Service extends AbstractComponent {
 
     @XmlTransient
     private static final String SHORT = "short";
-    private static final CMDString RESTFULL = new CMDString("RESTfull");
-    private static final CMDString DEVELOPMENT = new CMDString("development");
+    private static final StringBinding RESTFULL = new StringBinding("RESTfull");
+    private static final StringBinding DEVELOPMENT = new StringBinding("development");
     @XmlElement(name = "Name", required = true)
-    private CMDString name;
+    private StringBinding name;
     @XmlElement(name = "Description", required = true)
     private List<Description> descriptions;
     @XmlTransient
@@ -32,12 +32,12 @@ public class Service extends AbstractComponent {
     @XmlTransient
     private int shortDescriptionIndex = -1;
     @XmlElement(name = "TypeOfWebservice")
-    private CMDString typeOfWebservice;
+    private StringBinding typeOfWebservice;
     @XmlElement(required = true)
     @XmlSchemaType(name = "anyURI")
     private URI url;
     @XmlElement(name = "LifeCycleStatus", required = true)
-    private CMDString lifeCycleStatus;
+    private StringBinding lifeCycleStatus;
     @XmlElement(name = "PublicationDate", required = true)
     private Calendar publicationDate;
     @XmlElement(name = "LastUpdate", required = true)
@@ -61,11 +61,11 @@ public class Service extends AbstractComponent {
         this.serviceDescriptionLocation = new ServiceDescriptionLocation(Collections.singletonList(proxyId));
     }
 
-    public CMDString getName() {
+    public StringBinding getName() {
         return name;
     }
 
-    public void setName(CMDString name) {
+    public void setName(StringBinding name) {
         this.name = name;
     }
 
@@ -124,7 +124,7 @@ public class Service extends AbstractComponent {
         }
     }
 
-    public CMDString getTypeOfWebservice() {
+    public StringBinding getTypeOfWebservice() {
         return typeOfWebservice;
     }
 
@@ -136,11 +136,11 @@ public class Service extends AbstractComponent {
         this.url = url;
     }
 
-    public CMDString getLifeCycleStatus() {
+    public StringBinding getLifeCycleStatus() {
         return lifeCycleStatus;
     }
 
-    public void setLifeCycleStatus(CMDString lifeCycleStatus) {
+    public void setLifeCycleStatus(StringBinding lifeCycleStatus) {
         this.lifeCycleStatus = lifeCycleStatus;
     }
 

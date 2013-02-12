@@ -1,6 +1,6 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -14,17 +14,17 @@ import javax.xml.bind.annotation.XmlElement;
 public class OutputValue extends AbstractValue {
 
     @XmlElement(name = "RefInputParameterValue")
-    private List<CMDString> refInputParameterValues;
+    private List<StringBinding> refInputParameterValues;
 
     private OutputValue() {
     }
 
-    OutputValue(CMDString name, List<CMDString> refInputParameterValues) {
+    OutputValue(StringBinding name, List<StringBinding> refInputParameterValues) {
         super(name);
         this.refInputParameterValues = refInputParameterValues;
     }
 
-    public List<CMDString> getRefInputParameterValues() {
+    public List<StringBinding> getRefInputParameterValues() {
         return refInputParameterValues;
     }
 

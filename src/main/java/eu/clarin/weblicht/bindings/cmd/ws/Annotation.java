@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractDescribedComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,13 +15,13 @@ import javax.xml.bind.annotation.XmlElement;
 public class Annotation extends AbstractDescribedComponent {
 
     @XmlElement(name = "AnnotationMode")
-    private List<CMDString> annotationMode;
+    private List<StringBinding> annotationMode;
     @XmlElement(name = "AnnotationStandoff")
-    private List<CMDString> annotationStandoff;
+    private List<StringBinding> annotationStandoff;
     @XmlElement(name = "InterannotatorAgreement")
-    private List<CMDString> interannotatorAgreement;
+    private List<StringBinding> interannotatorAgreement;
     @XmlElement(name = "AnnotationFormat")
-    private List<CMDString> annotationFormat;
+    private List<StringBinding> annotationFormat;
     @XmlElement(name = "SegmentationUnits")
     private SegmentationUnits segmentationUnits;
     @XmlElement(name = "AnnotationTypes")
@@ -32,19 +32,19 @@ public class Annotation extends AbstractDescribedComponent {
     private Annotation() {
     }
 
-    public List<CMDString> getAnnotationMode() {
+    public List<StringBinding> getAnnotationMode() {
         return annotationMode;
     }
 
-    public List<CMDString> getAnnotationStandoff() {
+    public List<StringBinding> getAnnotationStandoff() {
         return annotationStandoff;
     }
 
-    public List<CMDString> getInterannotatorAgreement() {
+    public List<StringBinding> getInterannotatorAgreement() {
         return interannotatorAgreement;
     }
 
-    public List<CMDString> getAnnotationFormat() {
+    public List<StringBinding> getAnnotationFormat() {
         return annotationFormat;
     }
 

@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractDescribedComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,17 +15,17 @@ import javax.xml.bind.annotation.XmlElement;
 public class MediaFile extends AbstractDescribedComponent {
 
     @XmlElement(name = "CatalogueLink", required = true)
-    private List<CMDString> catalogueLinks;
+    private List<StringBinding> catalogueLinks;
     @XmlElement(name = "Type", required = true)
     private Type type;
     @XmlElement(name = "Format")
-    private List<CMDString> formats;
+    private List<StringBinding> formats;
     @XmlElement(name = "Size")
-    private List<CMDString> sizes;
+    private List<StringBinding> sizes;
     @XmlElement(name = "Quality", required = true)
     private Quality quality;
     @XmlElement(name = "RecordingConditions", required = true)
-    private List<CMDString> recordingConditions;
+    private List<StringBinding> recordingConditions;
     @XmlElement(name = "Position", required = true)
     private Position position;
     @XmlElement(name = "Access", required = true)
@@ -36,7 +36,7 @@ public class MediaFile extends AbstractDescribedComponent {
     private MediaFile() {
     }
 
-    public List<CMDString> getCatalogueLinks() {
+    public List<StringBinding> getCatalogueLinks() {
         return catalogueLinks;
     }
 
@@ -44,11 +44,11 @@ public class MediaFile extends AbstractDescribedComponent {
         return type;
     }
 
-    public List<CMDString> getFormats() {
+    public List<StringBinding> getFormats() {
         return formats;
     }
 
-    public List<CMDString> getSizes() {
+    public List<StringBinding> getSizes() {
         return sizes;
     }
 
@@ -56,7 +56,7 @@ public class MediaFile extends AbstractDescribedComponent {
         return quality;
     }
 
-    public List<CMDString> getRecordingConditions() {
+    public List<StringBinding> getRecordingConditions() {
         return recordingConditions;
     }
 

@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractRefBinding;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.Collections;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlAccessorType(value = XmlAccessType.FIELD)
 public class Operations extends AbstractRefBinding {
 
-    private static final CMDString DEFAULT = new CMDString("Default");
+    private static final StringBinding DEFAULT = new StringBinding("Default");
     @XmlElement(name = "Operation", required = true)
     private List<Operation> operations;
 

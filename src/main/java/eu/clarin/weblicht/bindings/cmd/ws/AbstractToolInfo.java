@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractDescribedComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +15,9 @@ import javax.xml.bind.annotation.*;
 public abstract class AbstractToolInfo extends AbstractDescribedComponent {
 
     @XmlElement(name = "ToolType")
-    private List<CMDString> toolTypes;
+    private List<StringBinding> toolTypes;
     @XmlElement(name = "Version")
-    private List<CMDString> versions;
+    private List<StringBinding> versions;
     @XmlElement(name = "Url")
     @XmlSchemaType(name = "anyURI")
     private List<URI> urls;
@@ -25,11 +25,11 @@ public abstract class AbstractToolInfo extends AbstractDescribedComponent {
     protected AbstractToolInfo() {
     }
 
-    public List<CMDString> getToolTypes() {
+    public List<StringBinding> getToolTypes() {
         return toolTypes;
     }
 
-    public List<CMDString> getVersions() {
+    public List<StringBinding> getVersions() {
         return versions;
     }
 

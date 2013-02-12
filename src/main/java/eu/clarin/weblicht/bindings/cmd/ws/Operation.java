@@ -1,6 +1,6 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -20,7 +20,7 @@ public class Operation extends AbstractNamedComponent {
     private Operation() {
     }
 
-    Operation(CMDString name) {
+    Operation(StringBinding name) {
         super(name);
     }
 

@@ -1,6 +1,6 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -11,27 +11,27 @@ import javax.xml.bind.annotation.*;
 public abstract class AbstractParameterGroup extends AbstractNamedComponent {
 
     @XmlElement(name = "MIMEType")
-    private CMDString mimeType;
+    private StringBinding mimeType;
     @XmlElement(name = "DataType")
-    private CMDString dataType;
+    private StringBinding dataType;
     @XmlElement(name = "DataCategory")
     @XmlSchemaType(name = "anyURI")
     private String dataCategory;
     @XmlElement(name = "SemanticType")
-    private CMDString semanticType;
+    private StringBinding semanticType;
 
     protected AbstractParameterGroup() {
     }
 
-    protected AbstractParameterGroup(CMDString name) {
+    protected AbstractParameterGroup(StringBinding name) {
         super(name);
     }
 
-    public CMDString getMIMEType() {
+    public StringBinding getMIMEType() {
         return mimeType;
     }
 
-    public CMDString getDataType() {
+    public StringBinding getDataType() {
         return dataType;
     }
 
@@ -39,7 +39,7 @@ public abstract class AbstractParameterGroup extends AbstractNamedComponent {
         return dataCategory;
     }
 
-    public CMDString getSemanticType() {
+    public StringBinding getSemanticType() {
         return semanticType;
     }
 }

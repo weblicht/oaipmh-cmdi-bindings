@@ -1,6 +1,6 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.*;
 
@@ -12,12 +12,12 @@ import javax.xml.bind.annotation.*;
 public class CreationToolInfo extends AbstractToolInfo {
 
     @XmlElement(name = "CreationTool")
-    private List<CMDString> creationTools;
+    private List<StringBinding> creationTools;
 
     private CreationToolInfo() {
     }
 
-    public List<CMDString> getCreationTools() {
+    public List<StringBinding> getCreationTools() {
         return creationTools;
     }
 

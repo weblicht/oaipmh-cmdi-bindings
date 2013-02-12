@@ -1,6 +1,6 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -13,17 +13,17 @@ import javax.xml.bind.annotation.XmlElement;
 public class InputValue extends AbstractValue {
 
     @XmlElement(name = "WebServiceArgValue")
-    private CMDString webServiceArgValue;
+    private StringBinding webServiceArgValue;
 
     private InputValue() {
     }
 
-    InputValue(CMDString value, CMDString webServiceArgValue) {
+    InputValue(StringBinding value, StringBinding webServiceArgValue) {
         super(value);
         this.webServiceArgValue = webServiceArgValue;
     }
 
-    public CMDString getWebServiceArgValue() {
+    public StringBinding getWebServiceArgValue() {
         return webServiceArgValue;
     }
 

@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractRefBinding;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.net.URI;
 import javax.xml.bind.annotation.*;
 
@@ -13,9 +13,9 @@ import javax.xml.bind.annotation.*;
 public abstract class AbstractValue extends AbstractRefBinding {
 
     @XmlElement(name = "Value", required = true)
-    private CMDString value;
+    private StringBinding value;
     @XmlElement(name = "Description")
-    private CMDString description;
+    private StringBinding description;
     @XmlElement(name = "DataCategory")
     @XmlSchemaType(name = "anyURI")
     private URI dataCategory;
@@ -23,15 +23,15 @@ public abstract class AbstractValue extends AbstractRefBinding {
     protected AbstractValue() {
     }
 
-    protected AbstractValue(CMDString value) {
+    protected AbstractValue(StringBinding value) {
         this.value = value;
     }
 
-    public CMDString getValue() {
+    public StringBinding getValue() {
         return value;
     }
 
-    public CMDString getDescription() {
+    public StringBinding getDescription() {
         return description;
     }
 

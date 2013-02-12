@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.chains;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,26 +17,26 @@ import javax.xml.bind.annotation.XmlType;
 public class Location extends AbstractComponent {
 
     @XmlElement(name = "Address")
-    private List<CMDString> address;
+    private List<StringBinding> address;
     @XmlElement(name = "Region")
-    private List<CMDString> region;
+    private List<StringBinding> region;
     @XmlElement(name = "ContinentName")
-    private List<CMDString> continentName;
+    private List<StringBinding> continentName;
     @XmlElement(name = "Country", required = true)
     private Country country;
 
     private Location() {
     }
 
-    public List<CMDString> getAddress() {
+    public List<StringBinding> getAddress() {
         return this.address;
     }
 
-    public List<CMDString> getRegion() {
+    public List<StringBinding> getRegion() {
         return this.region;
     }
 
-    public List<CMDString> getContinentName() {
+    public List<StringBinding> getContinentName() {
         return this.continentName;
     }
 

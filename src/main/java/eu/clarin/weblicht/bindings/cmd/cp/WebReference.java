@@ -1,7 +1,7 @@
 package eu.clarin.weblicht.bindings.cmd.cp;
 
 import eu.clarin.weblicht.bindings.cmd.AbstractComponent;
-import eu.clarin.weblicht.bindings.cmd.CMDString;
+import eu.clarin.weblicht.bindings.cmd.StringBinding;
 import java.util.List;
 import javax.xml.bind.annotation.*;
 
@@ -17,13 +17,13 @@ public class WebReference extends AbstractComponent {
     @XmlSchemaType(name = "anyURI")
     private String website;
     @XmlElement(name = "Description", required = true)
-    private List<CMDString> description;
+    private List<StringBinding> description;
 
     public String getWebsite() {
         return website;
     }
 
-    public List<CMDString> getDescription() {
+    public List<StringBinding> getDescription() {
         return description;
     }
 }
