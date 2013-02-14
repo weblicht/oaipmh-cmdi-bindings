@@ -11,28 +11,28 @@ import javax.xml.bind.annotation.*;
 @XmlRootElement(name = "OAI-PMH")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"responseDate", "request", "error", "records"})
-public class OAIPMHBinding {
+public class OAIPMH {
 
     @XmlElement
     private Calendar responseDate;
     @XmlElement
-    private RequestBinding request;
+    private Request request;
     @XmlElement
     private String error;
     @XmlElementWrapper(name = "ListRecords")
     @XmlElement(name = "record")
-    private List<RecordBinding> records;
+    private List<Record> records;
 
-    private OAIPMHBinding() {
+    private OAIPMH() {
     }
 
-    public OAIPMHBinding(List<RecordBinding> records, URI url) {
+    public OAIPMH(List<Record> records, URI url) {
         this.responseDate = new GregorianCalendar();
-        this.request = new RequestBinding("ListRecords", "cmdi", url);
+        this.request = new Request("ListRecords", "cmdi", url);
         this.records = records;
     }
 
-    public List<RecordBinding> getRecords() {
+    public List<Record> getRecords() {
         return records;
     }
 
@@ -40,7 +40,7 @@ public class OAIPMHBinding {
         return error;
     }
 
-    public RequestBinding getRequest() {
+    public Request getRequest() {
         return request;
     }
 

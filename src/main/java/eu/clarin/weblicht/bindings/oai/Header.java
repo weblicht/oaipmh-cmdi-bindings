@@ -12,7 +12,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"identifier", "dateStamp", "setSpec"})
-public class HeaderBinding {
+public class Header {
 
     @XmlElement
     private String identifier;
@@ -21,7 +21,7 @@ public class HeaderBinding {
     @XmlElement(name = "setSpec")
     private String setSpec;
 
-    private HeaderBinding() {
+    private Header() {
     }
 
     public XMLGregorianCalendar getDateStamp() {

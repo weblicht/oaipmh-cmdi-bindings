@@ -11,23 +11,23 @@ import javax.xml.bind.annotation.*;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"header", "metadata"})
-public class RecordBinding {
+public class Record {
 
     @XmlElement
-    private HeaderBinding header;
+    private Header header;
     @XmlElementWrapper(name = "metadata")
     @XmlElement(name = "CMD", namespace = "http://www.clarin.eu/cmd/")
     private List<ServiceCMD> metadata;
 
-    protected RecordBinding() {
+    protected Record() {
     }
 
-    public RecordBinding(HeaderBinding header, ServiceCMD cmd) {
+    public Record(Header header, ServiceCMD cmd) {
         this.header = header;
         this.metadata = Collections.singletonList(cmd);
     }
 
-    public HeaderBinding getHeader() {
+    public Header getHeader() {
         return header;
     }
 

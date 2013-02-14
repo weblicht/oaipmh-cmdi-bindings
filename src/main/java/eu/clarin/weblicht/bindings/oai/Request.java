@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlValue;
  * @author akislev
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-public class RequestBinding {
+public class Request {
 
     @XmlAttribute
     private String verb;
@@ -20,10 +20,10 @@ public class RequestBinding {
     @XmlValue
     private URI url;
 
-    protected RequestBinding() {
+    protected Request() {
     }
 
-    public RequestBinding(String verb, String metadataPrefix, URI url) {
+    public Request(String verb, String metadataPrefix, URI url) {
         this.verb = verb;
         this.metadataPrefix = metadataPrefix;
         this.url = url;
