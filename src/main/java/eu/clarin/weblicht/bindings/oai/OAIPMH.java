@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.*;
  */
 @XmlRootElement(name = "OAI-PMH")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"responseDate", "request", "error", "records"})
+@XmlType(propOrder = {"responseDate", "request", "error", "listRecords"})
 public class OAIPMH {
 
     @XmlElement
@@ -19,9 +19,8 @@ public class OAIPMH {
     private Request request;
     @XmlElement
     private String error;
-    @XmlElementWrapper(name = "ListRecords")
-    @XmlElement(name = "record")
-    private List<Record> records;
+    @XmlElement(name = "ListRecords")
+    private ListRecords listRecords;
 
     private OAIPMH() {
     }
@@ -29,11 +28,17 @@ public class OAIPMH {
     public OAIPMH(List<Record> records, URI url) {
         this.responseDate = new GregorianCalendar();
         this.request = new Request("ListRecords", "cmdi", url);
-        this.records = records;
+        this.listRecords = new ListRecords(records);
     }
 
-    public List<Record> getRecords() {
-        return records;
+    public OAIPMH(List<Record> records, URI url, String resumptionToken) {
+        this.responseDate = new GregorianCalendar();
+        this.request = new Request("ListRecords", "cmdi", url);
+        this.listRecords = new ListRecords(records, resumptionToken);
+    }
+
+    public ListRecords getListRecords() {
+        return listRecords;
     }
 
     public String getError() {
@@ -50,6 +55,6 @@ public class OAIPMH {
 
     @Override
     public String toString() {
-        return "OAI-PMH{" + "responseDate=" + responseDate + ", request=" + request + ", records=" + records + '}';
+        return "OAI-PMH{" + "responseDate=" + responseDate + ", request=" + request + ", listRecords=" + listRecords + '}';
     }
 }
