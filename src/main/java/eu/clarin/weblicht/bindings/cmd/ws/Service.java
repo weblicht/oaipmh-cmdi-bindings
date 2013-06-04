@@ -23,6 +23,7 @@ public class Service extends AbstractComponent {
     private static final String SHORT = "short";
     private static final StringBinding RESTFULL = new StringBinding("RESTfull");
     private static final StringBinding DEVELOPMENT = new StringBinding("development");
+    private static final ApplicationType WEB_SERVICE = new ApplicationType(SimpleApplicationType.WEB_SERVICE);
     @XmlElement(name = "Name", required = true)
     private StringBinding name;
     @XmlElement(name = "Description", required = true)
@@ -31,6 +32,8 @@ public class Service extends AbstractComponent {
     private int descriptionIndex = -1;
     @XmlTransient
     private int shortDescriptionIndex = -1;
+    @XmlElement(name = "ApplicationType")
+    private ApplicationType applicationType = WEB_SERVICE;
     @XmlElement(name = "TypeOfWebservice")
     private StringBinding typeOfWebservice;
     @XmlElement(required = true)
@@ -124,6 +127,10 @@ public class Service extends AbstractComponent {
         }
     }
 
+    public ApplicationType getApplicationType() {
+        return applicationType;
+    }
+
     public StringBinding getTypeOfWebservice() {
         return typeOfWebservice;
     }
@@ -162,6 +169,10 @@ public class Service extends AbstractComponent {
 
     public ServiceDescriptionLocation getServiceDescriptionLocation() {
         return serviceDescriptionLocation;
+    }
+
+    public void setServiceDescriptionLocation(Object proxyId) {
+        this.serviceDescriptionLocation = new ServiceDescriptionLocation(Collections.singletonList(proxyId));
     }
 
     public Contact getContact() {

@@ -45,6 +45,12 @@ public class ServiceCMD extends AbstractCMD {
     public Service extractService() {
         return components != null && components.getWebLichtWebService() != null ? components.getWebLichtWebService().getService() : null;
     }
+    
+    public void setServiceDescriptionLocationId(String id){
+        ResourceProxy resourceProxy = resources.getFirstResourceProxy();
+        resourceProxy.setId(id);
+        components.getWebLichtWebService().getService().setServiceDescriptionLocation(resourceProxy);
+    }
 
     @Override
     public ServiceCMD copy() {
