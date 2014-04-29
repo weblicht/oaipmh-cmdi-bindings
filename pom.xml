@@ -37,13 +37,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <developerConnection>scm:git:git@github.com:weblicht/oaipmh-cmdi-bindings.git</developerConnection>
     </scm>
 
-    <developers>
-        <developer>
-            <name>Alexander Kislev</name>
-            <email>alexander.kislev@uni-tuebingen.de</email>
-        </developer>
-    </developers>
-
     <licenses>
         <license>
             <name>GNU Lesser General Public License, Version 3</name>
@@ -52,6 +45,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </license>
     </licenses>
 
+    <developers>
+        <developer>
+            <name>Alexander Kislev</name>
+            <email>alexander.kislev@uni-tuebingen.de</email>
+        </developer>
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
