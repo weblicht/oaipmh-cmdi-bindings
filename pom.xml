@@ -18,11 +18,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>eu.clarin.weblicht</groupId>
-    <artifactId>bindings</artifactId>
-    <version>1.0.4</version>
+    <artifactId>oaipmh-cmdi-bindings</artifactId>
+    <version>1.0.5-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>bindings</name>
+    <name>oaipmh-cmdi-bindings</name>
     <url>http://www.clarin.eu/</url>
 
     <properties>
