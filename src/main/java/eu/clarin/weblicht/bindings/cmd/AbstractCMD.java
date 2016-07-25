@@ -1,16 +1,20 @@
 package eu.clarin.weblicht.bindings.cmd;
 
+import org.eclipse.persistence.oxm.annotations.XmlDiscriminatorNode;
+
 import javax.xml.bind.annotation.*;
 
 /**
  *
  * @author akislev
  */
+@XmlTransient
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "header",
     "resources"
 })
+@XmlDiscriminatorNode("@type")
 public abstract class AbstractCMD extends Copyable {
 
     @XmlAttribute(name = "CMDVersion", required = true)

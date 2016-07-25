@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xml-bindings xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              package-name="eu.clarin.weblicht.bindings.cmd"
+              xml-mapping-metadata-complete="false"
+              version="2.6" >
+    <xml-schema  element-form-default="QUALIFIED" namespace="http://www.clarin.eu/cmd/1">
+        <xml-ns prefix="cmd" namespace-uri="http://www.clarin.eu/cmd/1"/>
+        <xml-ns prefix="cmdp" namespace-uri="http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1320657629644"/>
+    </xml-schema>
+    <java-types>
+        <java-type name="AbstractRefBinding">
+            <java-attributes>
+                <xml-attribute java-attribute="refs" name="ref" namespace="http://www.clarin.eu/cmd/1" xml-idref="true">
+                    <xml-schema-type name="IDREFS"/>
+                </xml-attribute>
+            </java-attributes>
+        </java-type>
+    </java-types>
+</xml-bindings>

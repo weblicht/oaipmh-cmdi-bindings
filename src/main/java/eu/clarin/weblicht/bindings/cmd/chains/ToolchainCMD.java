@@ -12,6 +12,8 @@ import javax.xml.bind.annotation.*;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
+    "header",
+    "resources",
     "components"
 })
 @XmlRootElement(name = "CMD")

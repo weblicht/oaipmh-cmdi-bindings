@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmd:CMD xmlns:cmd="http://www.clarin.eu/cmd/1"
+     xmlns:cmdp="http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1320657629644"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     CMDVersion="1.1"
+     xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629667/xsd">
+    <cmd:Header/>
+    <cmd:Resources>
+        <cmd:ResourceProxyList/>
+        <cmd:JournalFileProxyList/>
+        <cmd:ResourceRelationList/>
+    </cmd:Resources>
+    <cmd:Components>
+        <cmd:CenterProfile>
+            <cmd:CenterBasicInformation>
+                <cmd:Name>Bayerisches Archiv für Sprachsignale</cmd:Name>
+                <cmd:Type>B</cmd:Type>
+                <cmd:Status>Certified</cmd:Status>
+                <cmd:Description></cmd:Description>
+                <cmd:Country>
+                    <cmd:Code>DE</cmd:Code>
+                </cmd:Country>
+            </cmd:CenterBasicInformation>
+            <cmd:CenterExtendedInformation>
+                <cmd:Website>http://hdl.handle.net/11858/00-1779-0000-000C-DAAF-B</cmd:Website>
+                <cmd:LongTermArchivingPolicy></cmd:LongTermArchivingPolicy>
+                <cmd:RepositorySystem>Custom.</cmd:RepositorySystem>
+                <cmd:PidStatus>Handle via EPIC.</cmd:PidStatus>
+                <cmd:StrictVersioning>true</cmd:StrictVersioning>
+                <cmd:AssessmentStatus>Certified</cmd:AssessmentStatus>
+                
+                
+                    <cmd:WebReference>
+                        <cmd:Website>https://clarin.phonetik.uni-muenchen.de/BASSRU/</cmd:Website>
+                        <cmd:Description>CQL</cmd:Description>
+                    </cmd:WebReference>
+                
+                <cmd:AAI>
+                    <cmd:AaiStatus>about:deprecated</cmd:AaiStatus>
+                    <!-- Deprecated: not schema-valid
+                    <MemberOfNationalFederation>CLARIN-D</MemberOfNationalFederation>
+                    -->
+                    <cmd:MemberOfSpf>false</cmd:MemberOfSpf>
+                </cmd:AAI>
+                
+                    
+                        <cmd:Metadata>
+                            <cmd:MetadataScheme>CMDI</cmd:MetadataScheme>
+                            
+                                <cmd:WebServicesSet>Weblicht</cmd:WebServicesSet>
+                            <cmd:WebServiceType>WebLicht</cmd:WebServiceType>
+                            <cmd:OaiAccessPoint>http://www.phonetik.uni-muenchen.de/cgi-bin/BASRepository/oaipmh/oai.pl</cmd:OaiAccessPoint>
+                        </cmd:Metadata>
+                    
+                
+                <cmd:OrganisationalInformation>
+                    <cmd:ClarinOrganisationInfo>
+                        <cmd:OrganisationName>Bayerisches Archiv für Sprachsignale</cmd:OrganisationName>
+                        <cmd:Institution>Ludwig-Maximilians-Universität München</cmd:Institution>
+                        <cmd:WorkingUnit>BAS CLARIN-D Centre</cmd:WorkingUnit>
+                        <cmd:Code>BAS</cmd:Code>
+                        <cmd:PostAddress>Schellingstraße 3,
+                            80799,
+                            München,
+                            
+                                Germany
+                            
+                        </cmd:PostAddress>
+                        <cmd:Expertise>Speech data processing, web services and tools for spoken language, corpus production and validation, curation of external speech corpora, consulting and teaching.</cmd:Expertise>
+                    </cmd:ClarinOrganisationInfo>
+                    <cmd:AdministrativeContact>
+                        <cmd:Contact>
+                            <cmd:Person>Christoph Draxler &lt;bas@bas.uni-muenchen.de&gt;</cmd:Person>
+                            <cmd:Email>bas@bas.uni-muenchen.de</cmd:Email>
+                            <cmd:Telephone>+49 89 2802758</cmd:Telephone>
+                            <cmd:Website></cmd:Website>
+                        </cmd:Contact>
+                    </cmd:AdministrativeContact>
+                    <cmd:TechnicalContact>
+                        <cmd:Contact>
+                            <cmd:Person>Florian Schiel &lt;bas@bas.uni-muenchen.de&gt;</cmd:Person>
+                            <cmd:Email>bas@bas.uni-muenchen.de</cmd:Email>
+                            <cmd:Telephone>+49 89 2802758</cmd:Telephone>
+                            <cmd:Website></cmd:Website>
+                        </cmd:Contact>
+                    </cmd:TechnicalContact>
+                </cmd:OrganisationalInformation>
+                <Monitoring>
+                    <SpTestSite>about:deprecated</SpTestSite>
+                </Monitoring>
+            </cmd:CenterExtendedInformation>
+        </cmd:CenterProfile>
+    </cmd:Components>
+</cmd:CMD>

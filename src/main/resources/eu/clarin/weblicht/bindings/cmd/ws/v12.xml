@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xml-bindings xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              package-name="eu.clarin.weblicht.bindings.cmd.ws"
+              xml-mapping-metadata-complete="false"
+              version="2.6" >
+    <xml-schema  element-form-default="QUALIFIED" namespace="http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1320657629644">
+        <xml-ns prefix="cmd" namespace-uri="http://www.clarin.eu/cmd/1"/>
+        <xml-ns prefix="cmdp" namespace-uri="http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1320657629644"/>
+    </xml-schema>
+    <java-types>
+        <java-type name="Components">
+            <xml-root-element name="Components" namespace="http://www.clarin.eu/cmd/1"/>
+        </java-type>
+        <java-type name="ServiceCMD">
+            <xml-root-element name="CMD" namespace="http://www.clarin.eu/cmd/1"/>
+            <java-attributes>
+                <xml-element required="true" java-attribute="components" name="Components" namespace="http://www.clarin.eu/cmd/1"/>
+            </java-attributes>
+        </java-type>
+    </java-types>
+</xml-bindings>

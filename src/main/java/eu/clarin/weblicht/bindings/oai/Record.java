@@ -16,7 +16,7 @@ public class Record {
     @XmlElement
     private Header header;
     @XmlElementWrapper(name = "metadata")
-    @XmlElement(name = "CMD", namespace = "http://www.clarin.eu/cmd/")
+    @XmlElement(name = "CMD")
     private List<ServiceCMD> metadata;
 
     protected Record() {
