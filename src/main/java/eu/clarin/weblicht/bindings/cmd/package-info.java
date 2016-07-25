@@ -1,3 +1,4 @@
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.clarin.eu/cmd/", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED,
-xmlns = {@javax.xml.bind.annotation.XmlNs(prefix = "cmd", namespaceURI = "http://www.clarin.eu/cmd/")})
+@javax.xml.bind.annotation.XmlSchema( elementFormDefault = XmlNsForm.UNQUALIFIED)
 package eu.clarin.weblicht.bindings.cmd;
+
+import javax.xml.bind.annotation.XmlNsForm;
