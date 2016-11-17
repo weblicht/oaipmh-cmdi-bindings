@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<D-Spin
+    xmlns="http://www.dspin.de/data" version="0.4">
+    <MetaData
+        xmlns="http://www.dspin.de/data/metadata">
+        <source></source>
+    </MetaData>
+    <TextCorpus
+        xmlns="http://www.dspin.de/data/textcorpus" lang="en">
+        <text>We are now in Vienna, the capital of Austria.</text>
+    </TextCorpus>
+</D-Spin>

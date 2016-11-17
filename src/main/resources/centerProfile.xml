@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMD xmlns="http://www.clarin.eu/cmd/"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     CMDVersion="1.1"
+     xsi:schemaLocation="http://www.clarin.eu/cmd/ http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629667/xsd">
+    <Header/>
+    <Resources>
+        <ResourceProxyList/>
+        <JournalFileProxyList/>
+        <ResourceRelationList/>
+    </Resources>
+    <Components>
+        <CenterProfile>
+            <CenterBasicInformation>
+                <Name>Bayerisches Archiv für Sprachsignale</Name>
+                <Type>B</Type>
+                <Status>Certified</Status>
+                <Description></Description>
+                <Country>
+                    <Code>DE</Code>
+                </Country>
+            </CenterBasicInformation>
+            <CenterExtendedInformation>
+                <Website>http://hdl.handle.net/11858/00-1779-0000-000C-DAAF-B</Website>
+                <LongTermArchivingPolicy></LongTermArchivingPolicy>
+                <RepositorySystem>Custom.</RepositorySystem>
+                <PidStatus>Handle via EPIC.</PidStatus>
+                <StrictVersioning>true</StrictVersioning>
+                <AssessmentStatus>Certified</AssessmentStatus>
+                
+                
+                    <WebReference>
+                        <Website>https://clarin.phonetik.uni-muenchen.de/BASSRU/</Website>
+                        <Description>CQL</Description>
+                    </WebReference>
+                
+                <AAI>
+                    <AaiStatus>about:deprecated</AaiStatus>
+                    <!-- Deprecated: not schema-valid
+                    <MemberOfNationalFederation>CLARIN-D</MemberOfNationalFederation>
+                    -->
+                    <MemberOfSpf>false</MemberOfSpf>
+                </AAI>
+                
+                    
+                        <Metadata>
+                            <MetadataScheme>CMDI</MetadataScheme>
+                            
+                                <WebServicesSet>Weblicht</WebServicesSet> 
+                            <WebServiceType>WebLicht</WebServiceType>
+                            <OaiAccessPoint>http://www.phonetik.uni-muenchen.de/cgi-bin/BASRepository/oaipmh/oai.pl</OaiAccessPoint>
+                        </Metadata>
+                    
+                
+                <OrganisationalInformation>
+                    <ClarinOrganisationInfo>
+                        <OrganisationName>Bayerisches Archiv für Sprachsignale</OrganisationName>
+                        <Institution>Ludwig-Maximilians-Universität München</Institution>
+                        <WorkingUnit>BAS CLARIN-D Centre</WorkingUnit>
+                        <Code>BAS</Code>
+                        <PostAddress>Schellingstraße 3,
+                            80799,
+                            München,
+                            
+                                Germany
+                            
+                        </PostAddress>
+                        <Expertise>Speech data processing, web services and tools for spoken language, corpus production and validation, curation of external speech corpora, consulting and teaching.</Expertise>
+                    </ClarinOrganisationInfo>
+                    <AdministrativeContact>
+                        <Contact>
+                            <Person>Christoph Draxler &lt;bas@bas.uni-muenchen.de&gt;</Person>
+                            <Email>bas@bas.uni-muenchen.de</Email>
+                            <Telephone>+49 89 2802758</Telephone>
+                            <Website></Website>
+                        </Contact>
+                    </AdministrativeContact>
+                    <TechnicalContact>
+                        <Contact>
+                            <Person>Florian Schiel &lt;bas@bas.uni-muenchen.de&gt;</Person>
+                            <Email>bas@bas.uni-muenchen.de</Email>
+                            <Telephone>+49 89 2802758</Telephone>
+                            <Website></Website>
+                        </Contact>
+                    </TechnicalContact>
+                </OrganisationalInformation>
+                <Monitoring>
+                    <SpTestSite>about:deprecated</SpTestSite>
+                </Monitoring>
+            </CenterExtendedInformation>
+        </CenterProfile>
+    </Components>
+</CMD>
