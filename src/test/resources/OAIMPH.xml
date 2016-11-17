@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <responseDate>2016-12-06T10:55:02Z</responseDate>
+    <request verb="ListRecords" metadataPrefix="cmdi">http://weblicht.sfs.uni-tuebingen.de/oaiprovider/</request>
+    <ListRecords>
+        <record>
+            <header>
+                <identifier>oai:sfs.uni-tuebingen.de:FID:24</identifier>
+                <datestamp>2016-01-25T13:07:36Z</datestamp>
+                <setSpec>WebLichtWebServices</setSpec>
+            </header>
+            <metadata>
+                <cmd:CMD xmlns:cmd="http://www.clarin.eu/cmd/" CMDVersion="1.1">
+                    <cmd:Header>
+                        <cmd:MdSelfLink>http://hdl.handle.net/11022/0000-0000-2060-F</cmd:MdSelfLink>
+                        <cmd:MdProfile>clarin.eu:cr1:p_1320657629644</cmd:MdProfile>
+                    </cmd:Header>
+                    <cmd:Resources>
+                        <cmd:ResourceProxyList>
+                            <cmd:ResourceProxy id="s1565857569">
+                                <cmd:ResourceType mimetype="application/vnd.sun.wadl+xml">Resource</cmd:ResourceType>
+                                <cmd:ResourceRef>http://weblicht.sfs.uni-tuebingen.de/wadler/generate?pid=http://hdl.handle.net/11022/0000-0000-2060-F</cmd:ResourceRef>
+                            </cmd:ResourceProxy>
+                        </cmd:ResourceProxyList>
+                        <cmd:JournalFileProxyList/>
+                        <cmd:ResourceRelationList/>
+                    </cmd:Resources>
+                    <cmd:Components>
+                        <cmd:WebLichtWebService>
+                            <cmd:Service>
+                                <cmd:Name>MaltParser</cmd:Name>
+                                <cmd:Description>MaltParser is a system for data-driven dependency parsing, which can be used to induce a parsing model from treebank data and to parse new data using an induced model. MaltParser is developed by Johan Hall, Jens Nilsson and Joakim Nivre at Växjö University and Uppsala University, Sweden.
+
+                                    The model for Italian was trained on the MIDT corpus is *very* experimental.</cmd:Description>
+                                <cmd:Description type="short">MaltParser is a system for data-driven dependency parsing.</cmd:Description>
+                                <cmd:ApplicationType>webService</cmd:ApplicationType>
+                                <cmd:TypeOfWebservice>RESTfull</cmd:TypeOfWebservice>
+                                <cmd:url>http://weblicht.sfs.uni-tuebingen.de/rws/parsers/service-malt/annotate/parse</cmd:url>
+                                <cmd:LifeCycleStatus>development</cmd:LifeCycleStatus>
+                                <cmd:PublicationDate>2013-09-20T12:44:34.519+02:00</cmd:PublicationDate>
+                                <cmd:LastUpdate>2014-03-10T16:57:04.084+01:00</cmd:LastUpdate>
+                                <cmd:ServiceDescriptionLocation ref="s1565857569"/>
+                                <cmd:Contact>
+                                    <cmd:Email>wlsupport@sfs.uni-tuebingen.de</cmd:Email>
+                                </cmd:Contact>
+                                <cmd:Creation>
+                                    <cmd:Creators>
+                                        <cmd:Creator>
+                                            <cmd:Contact>
+                                                <cmd:Organisation>SfS: Uni-Tuebingen</cmd:Organisation>
+                                            </cmd:Contact>
+                                        </cmd:Creator>
+                                    </cmd:Creators>
+                                </cmd:Creation>
+                                <cmd:Operations>
+                                    <cmd:Operation>
+                                        <cmd:Name>Default</cmd:Name>
+                                        <cmd:Input>
+                                            <cmd:ParameterGroup>
+                                                <cmd:Name>Input Parameters</cmd:Name>
+                                                <cmd:Parameters>
+                                                    <cmd:Parameter>
+                                                        <cmd:Name>type</cmd:Name>
+                                                        <cmd:WebServiceArgValue/>
+                                                        <cmd:AllowManualSelectionFallback>false</cmd:AllowManualSelectionFallback>
+                                                        <cmd:Values>
+                                                            <cmd:ParameterValue>
+                                                                <cmd:Value>text/tcf+xml</cmd:Value>
+                                                            </cmd:ParameterValue>
+                                                        </cmd:Values>
+                                                    </cmd:Parameter>
+                                                    <cmd:Parameter>
+                                                        <cmd:Name>version</cmd:Name>
+                                                        <cmd:WebServiceArgValue/>
+                                                        <cmd:AllowManualSelectionFallback>false</cmd:AllowManualSelectionFallback>
+                                                        <cmd:Values>
+                                                            <cmd:ParameterValue>
+                                                                <cmd:Value>0.4</cmd:Value>
+                                                            </cmd:ParameterValue>
+                                                        </cmd:Values>
+                                                    </cmd:Parameter>
+                                                    <cmd:Parameter>
+                                                        <cmd:Name>sentences</cmd:Name>
+                                                        <cmd:WebServiceArgValue/>
+                                                        <cmd:AllowManualSelectionFallback>false</cmd:AllowManualSelectionFallback>
+                                                    </cmd:Parameter>
+                                                    <cmd:Parameter>
+                                                        <cmd:Name>tokens</cmd:Name>
+                                                        <cmd:WebServiceArgValue/>
+                                                        <cmd:AllowManualSelectionFallback>false</cmd:AllowManualSelectionFallback>
+                                                    </cmd:Parameter>
+                                                    <cmd:Parameter>
+                                                        <cmd:Name>lang</cmd:Name>
+                                                        <cmd:WebServiceArgValue/>
+                                                        <cmd:AllowManualSelectionFallback>false</cmd:AllowManualSelectionFallback>
+                                                        <cmd:Values>
+                                                            <cmd:ParameterValue>
+                                                                <cmd:Value>it</cmd:Value>
+                                                            </cmd:ParameterValue>
+                                                        </cmd:Values>
+                                                    </cmd:Parameter>
+                                                    <cmd:Parameter>
+                                                        <cmd:Name>postags.tagset</cmd:Name>
+                                                        <cmd:WebServiceArgValue/>
+                                                        <cmd:AllowManualSelectionFallback>false</cmd:AllowManualSelectionFallback>
+                                                        <cmd:Values>
+                                                            <cmd:ParameterValue>
+                                                                <cmd:Value>ilc-parole</cmd:Value>
+                                                            </cmd:ParameterValue>
+                                                        </cmd:Values>
+                                                    </cmd:Parameter>
+                                                </cmd:Parameters>
+                                            </cmd:ParameterGroup>
+                                        </cmd:Input>
+                                        <cmd:Output>
+                                            <cmd:ParameterGroup>
+                                                <cmd:Name>Output Parameters</cmd:Name>
+                                                <cmd:ReplacesInput>false</cmd:ReplacesInput>
+                                                <cmd:Parameters>
+                                                    <cmd:Parameter>
+                                                        <cmd:Name>depparsing.tagset</cmd:Name>
+                                                        <cmd:Values>
+                                                            <cmd:ParameterValue>
+                                                                <cmd:Value>midt</cmd:Value>
+                                                            </cmd:ParameterValue>
+                                                        </cmd:Values>
+                                                    </cmd:Parameter>
+                                                    <cmd:Parameter>
+                                                        <cmd:Name>depparsing.emptytoks</cmd:Name>
+                                                        <cmd:Values>
+                                                            <cmd:ParameterValue>
+                                                                <cmd:Value>false</cmd:Value>
+                                                            </cmd:ParameterValue>
+                                                        </cmd:Values>
+                                                    </cmd:Parameter>
+                                                    <cmd:Parameter>
+                                                        <cmd:Name>depparsing.multigovs</cmd:Name>
+                                                        <cmd:Values>
+                                                            <cmd:ParameterValue>
+                                                                <cmd:Value>true</cmd:Value>
+                                                            </cmd:ParameterValue>
+                                                        </cmd:Values>
+                                                    </cmd:Parameter>
+                                                </cmd:Parameters>
+                                            </cmd:ParameterGroup>
+                                        </cmd:Output>
+                                    </cmd:Operation>
+                                </cmd:Operations>
+                            </cmd:Service>
+                        </cmd:WebLichtWebService>
+                    </cmd:Components>
+                </cmd:CMD>
+            </metadata>
+        </record>
+        <resumptionToken cursor="0">X1183499114/1</resumptionToken>
+    </ListRecords>
+</OAI-PMH>

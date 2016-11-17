@@ -1,16 +1,18 @@
 package eu.clarin.weblicht.bindings.cmd.ws;
 
+import eu.clarin.weblicht.bindings.CMDITemplateFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
-import java.io.File;
+import javax.xml.bind.util.JAXBResult;
+import javax.xml.transform.Templates;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.stream.StreamSource;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -22,20 +24,20 @@ public class ServiceCMD11Test {
     @Before
     public void setUp() throws Exception {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        InputStream inputStream1 = classLoader.getResourceAsStream("eu/clarin/weblicht/bindings/cmd/ws/v11.xml");
-        InputStream inputStream2 = classLoader.getResourceAsStream("eu/clarin/weblicht/bindings/cmd/v11.xml");
+        Templates templates = CMDITemplateFactory.getTemplates();
 
-        List<Object> streamList = new ArrayList<Object>();
-        streamList.add(inputStream1);
-        streamList.add(inputStream2);
+        Transformer transformer = templates.newTransformer();
 
         Map<String, Object> properties = new HashMap<String, Object>();
 
+
+        InputStream cmdi11 = classLoader.getResourceAsStream("9_1.xml");
+        StreamSource source = new StreamSource(cmdi11);
         JAXBContext ex = JAXBContext.newInstance(new Class[]{ServiceCMD.class}, properties);
-        System.out.println(ex);
         Unmarshaller unmarshaller = ex.createUnmarshaller();
-        File cmdi11 = new File("/Users/wqiu/Projects/clarind/oaipmh-cmdi-bindings/src/main/resources/9_1.xml");
-        serviceCMD = (ServiceCMD) unmarshaller.unmarshal(cmdi11);
+        JAXBResult jaxbResult = new JAXBResult(unmarshaller);
+        transformer.transform(source, jaxbResult);
+        serviceCMD = (ServiceCMD) jaxbResult.getResult();
         System.out.println(serviceCMD);
 
     }
@@ -47,7 +49,9 @@ public class ServiceCMD11Test {
     }
 
     @Test
-    public void testMarshalling() throws Exception {
+    public void testUnmarshalling() throws Exception {
+        System.out.println(serviceCMD.getCMDVersion());
+        System.out.println(serviceCMD.extractService().getDescription());
 
 
     }

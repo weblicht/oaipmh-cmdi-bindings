@@ -1,0 +1,95 @@
+<cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:cmd="http://www.clarin.eu/cmd/1"
+         xmlns:cmdp="http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1320657629667"
+         CMDVersion="1.2"
+         xsi:schemaLocation="http://www.clarin.eu/cmd/1 https://infra.clarin.eu/CMDI/1.x/xsd/cmd-envelop.xsd http://www.clarin.eu/cmd/1/profiles/clarin.eu:cr1:p_1320657629667 https://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/1.x/profiles/clarin.eu:cr1:p_1320657629667/xsd">
+   <cmd:Header>
+      <cmd:MdProfile>clarin.eu:cr1:p_1320657629667</cmd:MdProfile>
+   </cmd:Header>
+   <cmd:Resources>
+      <cmd:ResourceProxyList/>
+      <cmd:JournalFileProxyList/>
+      <cmd:ResourceRelationList/>
+   </cmd:Resources>
+   <cmd:Components>
+        <cmdp:CenterProfile>
+            <cmdp:CenterBasicInformation>
+                <cmdp:Name>Bayerisches Archiv für Sprachsignale</cmdp:Name>
+                <cmdp:Type>B</cmdp:Type>
+                <cmdp:Status>Certified</cmdp:Status>
+                <cmdp:Description/>
+                <cmdp:Country>
+                    <cmdp:Code>DE</cmdp:Code>
+                </cmdp:Country>
+            </cmdp:CenterBasicInformation>
+            <cmdp:CenterExtendedInformation>
+                <cmdp:Website>http://hdl.handle.net/11858/00-1779-0000-000C-DAAF-B</cmdp:Website>
+                <cmdp:LongTermArchivingPolicy/>
+                <cmdp:RepositorySystem>Custom.</cmdp:RepositorySystem>
+                <cmdp:PidStatus>Handle via EPIC.</cmdp:PidStatus>
+                <cmdp:StrictVersioning>true</cmdp:StrictVersioning>
+                <cmdp:AssessmentStatus>Certified</cmdp:AssessmentStatus>
+                
+                
+                    <cmdp:WebReference>
+                        <cmdp:Website>https://clarin.phonetik.uni-muenchen.de/BASSRU/</cmdp:Website>
+                        <cmdp:Description>CQL</cmdp:Description>
+                    </cmdp:WebReference>
+                
+                <cmdp:AAI>
+                    <cmdp:AaiStatus>about:deprecated</cmdp:AaiStatus>
+                    <!-- Deprecated: not schema-valid
+                    <MemberOfNationalFederation>CLARIN-D</MemberOfNationalFederation>
+                    -->
+                    <cmdp:MemberOfSpf>false</cmdp:MemberOfSpf>
+                </cmdp:AAI>
+                
+                    
+                        <cmdp:Metadata>
+                            <cmdp:MetadataScheme>CMDI</cmdp:MetadataScheme>
+                            
+                                <cmdp:WebServicesSet>Weblicht</cmdp:WebServicesSet> 
+                            <cmdp:WebServiceType>WebLicht</cmdp:WebServiceType>
+                            <cmdp:OaiAccessPoint>http://www.phonetik.uni-muenchen.de/cgi-bin/BASRepository/oaipmh/oai.pl</cmdp:OaiAccessPoint>
+                        </cmdp:Metadata>
+                    
+                
+                <cmdp:OrganisationalInformation>
+                    <cmdp:ClarinOrganisationInfo>
+                        <cmdp:OrganisationName>Bayerisches Archiv für Sprachsignale</cmdp:OrganisationName>
+                        <cmdp:Institution>Ludwig-Maximilians-Universität München</cmdp:Institution>
+                        <cmdp:WorkingUnit>BAS CLARIN-D Centre</cmdp:WorkingUnit>
+                        <cmdp:Code>BAS</cmdp:Code>
+                        <cmdp:PostAddress>Schellingstraße 3,
+                            80799,
+                            München,
+                            
+                                Germany
+                            
+                        </cmdp:PostAddress>
+                        <cmdp:Expertise>Speech data processing, web services and tools for spoken language, corpus production and validation, curation of external speech corpora, consulting and teaching.</cmdp:Expertise>
+                    </cmdp:ClarinOrganisationInfo>
+                    <cmdp:AdministrativeContact>
+                        <cmdp:Contact>
+                            <cmdp:Person>Christoph Draxler &amp;lt;bas@bas.uni-muenchen.de&amp;gt;</cmdp:Person>
+                            <cmdp:Email>bas@bas.uni-muenchen.de</cmdp:Email>
+                            <cmdp:Telephone>+49 89 2802758</cmdp:Telephone>
+                            <cmdp:Website/>
+                        </cmdp:Contact>
+                    </cmdp:AdministrativeContact>
+                    <cmdp:TechnicalContact>
+                        <cmdp:Contact>
+                            <cmdp:Person>Florian Schiel &amp;lt;bas@bas.uni-muenchen.de&amp;gt;</cmdp:Person>
+                            <cmdp:Email>bas@bas.uni-muenchen.de</cmdp:Email>
+                            <cmdp:Telephone>+49 89 2802758</cmdp:Telephone>
+                            <cmdp:Website/>
+                        </cmdp:Contact>
+                    </cmdp:TechnicalContact>
+                </cmdp:OrganisationalInformation>
+                <cmdp:Monitoring>
+                    <cmdp:SpTestSite>about:deprecated</cmdp:SpTestSite>
+                </cmdp:Monitoring>
+            </cmdp:CenterExtendedInformation>
+        </cmdp:CenterProfile>
+    </cmd:Components>
+</cmd:CMD>

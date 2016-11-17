@@ -32,8 +32,8 @@
             <xsl:when test="normalize-space(base-uri(/*))!=''">
                 <xsl:sequence select="normalize-space(base-uri(/*))"/>
             </xsl:when>
-            <xsl:when test="normalize-space(/cmd0:CMD/cmd0:Header/cmd0:MdSelfLink)!=''">
-                <xsl:sequence select="normalize-space(/cmd0:CMD/cmd0:Header/cmd0:MdSelfLink)"/>
+            <xsl:when test="normalize-space(//cmd0:CMD/cmd0:Header/cmd0:MdSelfLink)!=''">
+                <xsl:sequence select="normalize-space(//cmd0:CMD/cmd0:Header/cmd0:MdSelfLink)"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:sequence select="'NULL'"/>
@@ -52,8 +52,8 @@
     <xsl:variable name="profile">
         <xsl:variable name="header">
             <xsl:choose>
-                <xsl:when test="matches(/cmd0:CMD/cmd0:Header/cmd0:MdProfile,'.*(clarin.eu:cr1:p_[0-9]+).*')">
-                    <xsl:sequence select="replace(/cmd0:CMD/cmd0:Header/cmd0:MdProfile,'.*(clarin.eu:cr1:p_[0-9]+).*','$1')"/>
+                <xsl:when test="matches(//cmd0:CMD/cmd0:Header/cmd0:MdProfile,'.*(clarin.eu:cr1:p_[0-9]+).*')">
+                    <xsl:sequence select="replace(//cmd0:CMD/cmd0:Header/cmd0:MdProfile,'.*(clarin.eu:cr1:p_[0-9]+).*','$1')"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:sequence select="()"/>
@@ -63,12 +63,12 @@
         <xsl:variable name="schema"> 
             <xsl:variable name="location">
                 <xsl:choose>
-                    <xsl:when test="normalize-space(/cmd0:CMD/@xsi:noNamespaceSchemaLocation)!=''">
+                    <xsl:when test="normalize-space(//cmd0:CMD/@xsi:noNamespaceSchemaLocation)!=''">
                         <xsl:message>WRN: <xsl:value-of select="$base"/>: CMDI 1.1 uses namespaces so @xsi:schemaLocation should be used instead of @xsi:schemaLocation!</xsl:message>
                         <xsl:sequence select="normalize-space(/cmd0:CMD/@xsi:noNamespaceSchemaLocation)"/>
                     </xsl:when>
-                    <xsl:when test="normalize-space(/cmd0:CMD/@xsi:schemaLocation)!=''">
-                        <xsl:variable name="pairs" select="tokenize(/cmd0:CMD/@xsi:schemaLocation,'\s+')"/>
+                    <xsl:when test="normalize-space(//cmd0:CMD/@xsi:schemaLocation)!=''">
+                        <xsl:variable name="pairs" select="tokenize(//cmd0:CMD/@xsi:schemaLocation,'\s+')"/>
                         <xsl:choose>
                             <xsl:when test="count($pairs)=1">
                                 <!-- WRN: improper use of @xsi:schemaLocation! -->
@@ -143,7 +143,7 @@
     </xsl:variable>
     
     <!-- CMD version becomes 1.2 -->
-    <xsl:template match="/cmd0:CMD/@CMDVersion">
+    <xsl:template match="//cmd0:CMD/@CMDVersion">
         <xsl:attribute name="CMDVersion" select="'1.2'"/>
     </xsl:template>
     
@@ -152,7 +152,7 @@
     
     <xsl:template match="@xsi:noNamespaceSchemaLocation"/>
     
-    <xsl:template match="/cmd0:CMD">
+    <xsl:template match="//cmd0:CMD">
         <cmd:CMD>
             <xsl:namespace name="cmd" select="'http://www.clarin.eu/cmd/1'"/>
             <xsl:namespace name="cmdp" select="$cmd-profile-uri"/>
@@ -174,7 +174,7 @@
     </xsl:template>
     
     <!-- Make sure cmd:Header contains cmd:MdProfile -->
-    <xsl:template match="/cmd0:CMD/cmd0:Header" priority="2">
+    <xsl:template match="//cmd0:CMD/cmd0:Header" priority="2">
         <cmd:Header>
             <xsl:apply-templates select="cmd0:MdCreator"/>
             <xsl:apply-templates select="cmd0:MdCreationDate"/>
@@ -187,7 +187,7 @@
     </xsl:template>
     
     <!-- Skip cmd:Resources/cmd:IsPartOfList -->
-    <xsl:template match="/cmd0:CMD/cmd0:Resources" priority="2">
+    <xsl:template match="//cmd0:CMD/cmd0:Resources" priority="2">
         <cmd:Resources>
             <xsl:apply-templates select="cmd0:ResourceProxyList"/>
             <xsl:apply-templates select="cmd0:JournalFileProxyList"/>
@@ -196,14 +196,14 @@
     </xsl:template>
     
     <!-- Reshape ResourceRelationList -->
-    <xsl:template match="/cmd0:CMD/cmd0:Resources/cmd0:ResourceRelationList/cmd0:ResourceRelation/cmd0:RelationType" priority="2">
+    <xsl:template match="//cmd0:CMD/cmd0:Resources/cmd0:ResourceRelationList/cmd0:ResourceRelation/cmd0:RelationType" priority="2">
         <cmd:RelationType>
             <!-- take the string value, ignore deeper structure -->
             <xsl:value-of select="."/>
         </cmd:RelationType>
     </xsl:template>
     
-    <xsl:template match="/cmd0:CMD/cmd0:Resources/cmd0:ResourceRelationList/cmd0:ResourceRelation" priority="2">
+    <xsl:template match="//cmd0:CMD/cmd0:Resources/cmd0:ResourceRelationList/cmd0:ResourceRelation" priority="2">
         <xsl:choose>
             <xsl:when test="normalize-space(cmd0:Res1/@ref)='' or normalize-space(cmd0:Res2/@ref)=''">
                 <xsl:message>WRN: <xsl:value-of select="$base"/>: incomplete ResourceRelation, which will be ignored!</xsl:message>
@@ -217,14 +217,14 @@
             
     </xsl:template>
     
-    <xsl:template match="/cmd0:CMD/cmd0:Resources/cmd0:ResourceRelationList/cmd0:ResourceRelation/cmd0:Res1" priority="2">
+    <xsl:template match="//cmd0:CMD/cmd0:Resources/cmd0:ResourceRelationList/cmd0:ResourceRelation/cmd0:Res1" priority="2">
         <cmd:Resource>
             <xsl:apply-templates select="@*"/>
             <cmd:Role>Res1</cmd:Role>
         </cmd:Resource>
     </xsl:template>
     
-    <xsl:template match="/cmd0:CMD/cmd0:Resources/cmd0:ResourceRelationList/cmd0:ResourceRelation/cmd0:Res2" priority="2">
+    <xsl:template match="//cmd0:CMD/cmd0:Resources/cmd0:ResourceRelationList/cmd0:ResourceRelation/cmd0:Res2" priority="2">
         <cmd:Resource>
             <xsl:apply-templates select="@*"/>
             <cmd:Role>Res2</cmd:Role>
@@ -232,26 +232,26 @@
     </xsl:template>
     
     <!-- put envelop in the envelop namespace -->
-    <xsl:template match="/cmd0:CMD//*" priority="1">
+    <xsl:template match="//cmd0:CMD//*" priority="1">
         <xsl:element name="cmd:{local-name()}">
             <xsl:apply-templates select="@*|node()"/>
         </xsl:element>
     </xsl:template>
     
     <!-- put payload in the profile namespace -->
-    <xsl:template match="/cmd0:CMD/cmd0:Components//*" priority="2">
+    <xsl:template match="//cmd0:CMD/cmd0:Components//*" priority="2">
         <xsl:element namespace="{$cmd-profile-uri}" name="cmdp:{local-name()}">
             <xsl:apply-templates select="@*|node()"/>
         </xsl:element>
     </xsl:template>
     
     <!-- unescape downgraded CMDI 1.2 attributes -->
-    <xsl:template match="/cmd0:CMD/cmd0:Components//@*[name()=local-name()][starts-with(name(),$escape)]" priority="2">
+    <xsl:template match="//cmd0:CMD/cmd0:Components//@*[name()=local-name()][starts-with(name(),$escape)]" priority="2">
         <xsl:attribute name="{substring-after(name(),$escape)}" select="."/>
     </xsl:template>
     
     <!-- move CMD attributes to the CMD namespace -->
-    <xsl:template match="/cmd0:CMD/cmd0:Components//@ref" priority="2">
+    <xsl:template match="//cmd0:CMD/cmd0:Components//@ref" priority="2">
         <xsl:choose>
             <xsl:when test="exists(parent::*/text()[normalize-space()!=''])">
                 <!-- this is an element keep the @ref -->
@@ -273,7 +273,7 @@
                 <!-- don't know if the parent is a component without children, or an element without value
                      have a look at the profile -->
                 <xsl:variable name="prof" select="if (exists($cmd-profile)) then ($cmd-profile) else (doc($cr-profile-xml))"/>
-                <xsl:variable name="path" select="ancestor::*[. >> /cmd0:CMD/cmd0:Components]"/>
+                <xsl:variable name="path" select="ancestor::*[. >> cmd0:CMD/cmd0:Components]"/>
                 <xsl:variable name="attr" select="$prof//Attribute[@name='ref' or Name='ref'][string-join(ancestor::*[local-name()=('Component','CMD_Component','Element','CMD_Element')]/@name,'/')=string-join($path/local-name(),'/')]"/>
                 <xsl:choose>
                     <xsl:when test="exists($attr)">
@@ -297,7 +297,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="/cmd0:CMD/cmd0:Components//@ComponentId" priority="2">
+    <xsl:template match="//cmd0:CMD/cmd0:Components//@ComponentId" priority="2">
         <xsl:attribute name="cmd:ComponentId" select="."/>
     </xsl:template>
 
