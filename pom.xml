@@ -37,7 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses />.
 
     <groupId>eu.clarin.weblicht</groupId>
     <artifactId>oaipmh-cmdi-bindings</artifactId>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>1.0.7</version>
     <packaging>jar</packaging>
     <name>oaipmh-cmdi-bindings</name>
     <description>JAXB bindings for CMDI and OAIPMH.</description>
@@ -47,7 +47,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses />.
         <url>git@github.com:weblicht/oaipmh-cmdi-bindings.git</url>
         <connection>scm:git:git@github.com:weblicht/oaipmh-cmdi-bindings.git</connection>
         <developerConnection>scm:git:git@github.com:weblicht/oaipmh-cmdi-bindings.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>oaipmh-cmdi-bindings-1.0.7</tag>
   </scm>
 
     <licenses>
