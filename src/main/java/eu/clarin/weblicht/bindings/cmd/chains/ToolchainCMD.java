@@ -24,7 +24,7 @@ public class ToolchainCMD extends AbstractCMD {
     }
 
     public ToolchainCMD(WebServiceToolChain webServiceToolChain) {
-        super("1.1", null, new Resources(Collections.<ResourceProxy>emptyList()));
+        super("1.2", null, new Resources(Collections.<ResourceProxy>emptyList()));
         this.components = new Components(webServiceToolChain);
     }
 

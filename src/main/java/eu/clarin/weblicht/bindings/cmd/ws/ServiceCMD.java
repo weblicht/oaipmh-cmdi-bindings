@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.*;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ServiceCMD extends AbstractCMD {
 
-    private static final String CMD_VERSION = "1.1";
+    private static final String CMD_VERSION = "1.2";
     private static final String WADL_MIMETYPE = "application/vnd.sun.wadl+xml";
     private static final String PROXY_ID = "s001";
     @XmlElement(name = "Components", required = true, namespace = "http://www.clarin.eu/cmd/1")
