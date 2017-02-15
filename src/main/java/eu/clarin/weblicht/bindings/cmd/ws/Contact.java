@@ -118,11 +118,11 @@ public class Contact extends AbstractComponent {
 
     @Override
     public String toString() {
-        if (persons != null && persons.size() == 1) {
-            return persons.get(0).getValue();
-        } else if (emails != null && emails.size() == 1) {
+        if (emails != null && emails.size() == 1) {
             return emails.get(0).getValue();
-        } else if (organisations != null && organisations.size() == 1) {
+        } else if (persons != null && persons.size() == 1) {
+            return persons.get(0).getValue();
+        } else  if (organisations != null && organisations.size() == 1) {
             return organisations.get(0).getValue();
         } else if (urls != null && urls.size() == 1) {
             return urls.get(0).toString();
