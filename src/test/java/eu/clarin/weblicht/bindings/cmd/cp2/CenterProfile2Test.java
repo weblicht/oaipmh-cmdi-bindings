@@ -1,4 +1,4 @@
-package eu.clarin.weblicht.bindings.cmd.cp;
+package eu.clarin.weblicht.bindings.cmd.cp2;
 
 import eu.clarin.weblicht.bindings.CMDITemplateFactory;
 import org.junit.Test;
@@ -12,18 +12,15 @@ import java.io.InputStream;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by wqiu on 14/07/16.
- */
-public class CenterProfileCMD11Test {
+public class CenterProfile2Test {
     @Test
-    public void test() throws Exception {
+    public void test11() throws Exception {
         Transformer transformer = CMDITemplateFactory.getTemplates().newTransformer();
 
         StreamSource source;
         {
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-            InputStream cmdi11 = classLoader.getResourceAsStream("centerProfile.xml");
+            InputStream cmdi11 = classLoader.getResourceAsStream("centerProfile2.xml");
             source = new StreamSource(cmdi11);
         }
 
@@ -31,12 +28,14 @@ public class CenterProfileCMD11Test {
         {
             JAXBContext ex = JAXBContext.newInstance(CenterProfileCMD.class);
             Unmarshaller unmarshaller = ex.createUnmarshaller();
+            unmarshaller.setEventHandler(new javax.xml.bind.helpers.DefaultValidationEventHandler());
             jaxbResult = new JAXBResult(unmarshaller);
         }
 
         transformer.transform(source, jaxbResult);
         CenterProfileCMD centerProfileCMD = (CenterProfileCMD) jaxbResult.getResult();
 
+        System.out.println("centerProfileCMD: " + centerProfileCMD.getComponents().getCenterProfile());
         String name = centerProfileCMD.getComponents().getCenterProfile().getCenterBasicInformation().getName().get(0).getValue();
         assertEquals("Bayerisches Archiv für Sprachsignale", name);
     }
