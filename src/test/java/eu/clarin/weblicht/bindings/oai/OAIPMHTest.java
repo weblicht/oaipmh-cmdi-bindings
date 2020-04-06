@@ -26,6 +26,7 @@ public class OAIPMHTest {
 
         JAXBContext ex = JAXBContext.newInstance(ServiceCMD.class, CenterProfileCMD.class, OAIPMH.class);
         Unmarshaller unmarshaller = ex.createUnmarshaller();
+        unmarshaller.setEventHandler(new javax.xml.bind.helpers.DefaultValidationEventHandler());
         JAXBResult jaxbResult = new JAXBResult(unmarshaller);
 
         Transformer transformer = CMDITemplateFactory.getTemplates().newTransformer();

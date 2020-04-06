@@ -11,10 +11,10 @@ import javax.xml.bind.annotation.*;
  * @author akislev
  */
 @XmlAccessorType(value = XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"metadataScheme", "webServicesSet", "webServiceType", "oaiAccessPoint"})
+@XmlType(name = "", propOrder = {"metadataScheme", "webServicesSet", "webServiceType", "oaiAccessPoint", "oaiPmhSets"})
 public class Metadata extends AbstractRefBinding {
 
-    @XmlElement(name = "MetadataScheme", required = true)
+    @XmlElement(name = "MetadataScheme")
     private List<MetadataScheme> metadataScheme;
     @XmlElement(name = "WebServicesSet")
     private String webServicesSet;
@@ -23,6 +23,8 @@ public class Metadata extends AbstractRefBinding {
     @XmlElement(name = "OaiAccessPoint", required = true)
     @XmlSchemaType(name = "anyURI")
     private URI oaiAccessPoint;
+    @XmlElement(name = "OaiPmhSets")
+    protected OaiPmhSets oaiPmhSets;
 
     public List<MetadataScheme> getMetadataScheme() {
         if (metadataScheme == null) {
@@ -44,5 +46,9 @@ public class Metadata extends AbstractRefBinding {
 
     public URI getOaiAccessPoint() {
         return oaiAccessPoint;
+    }
+
+    public OaiPmhSets getOaiPmhSets() {
+        return oaiPmhSets;
     }
 }

@@ -13,7 +13,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "Centers")
 public class Centers {
-
     @XmlElement(name = "CenterProfile", required = true)
     private List<Center> centerProfiles;
 

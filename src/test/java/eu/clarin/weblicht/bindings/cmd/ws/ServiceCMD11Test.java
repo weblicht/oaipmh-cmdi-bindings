@@ -25,6 +25,7 @@ public class ServiceCMD11Test {
 
         JAXBContext context = JAXBContext.newInstance(ServiceCMD.class);
         Unmarshaller unmarshaller = context.createUnmarshaller();
+        unmarshaller.setEventHandler(new javax.xml.bind.helpers.DefaultValidationEventHandler());
         JAXBResult jaxbResult = new JAXBResult(unmarshaller);
 
         Templates templates = CMDITemplateFactory.getTemplates();
